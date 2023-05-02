@@ -3,7 +3,7 @@ An installation guide for Microsoft Windows 11 Professional to remove telemetry,
 
 - - - - - 
 
-This is provided under the Creative Commons Attribution-ShareAlike 4.0 International Public License.  For a quick summary of the license, see [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).  For the full license, read the **LICENSE** file in the repository.
+This is provided under the Creative Commons Attribution-ShareAlike 4.0 International Public License.  For a quick summary of the license, see [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).  For the full license, read the __**LICENSE**__ file in the repository.
 
 - - - - -
 

@@ -1,7 +1,7 @@
 # Win11Clean
 An installation guide for Microsoft Windows 11 Professional to remove telemetry, adware and other annoyances.
 
-This is currently a text-based, point-and-click guide.  The current intention is for the user to understand what they're doing, what they're affecting, and how the modification is performed so the user can understand how to reverse the change.
+This is currently a text-based, point-and-click guide.  The intention is for the user to understand what they're doing, what they're affecting, and how the modification is performed so the user can understand how to reverse the change.
 
 It is possible that this guide may be updated over time to offer a configurable script-driven solution.  I will make no such promises at this time.
 

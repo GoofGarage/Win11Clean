@@ -104,7 +104,7 @@
 
 2.	Click the [Next] Button.
 
-3.	When prompted, "Confirm your passwrd", re-enter the password.
+3.	When prompted, "Confirm your password", re-enter the password.
 
 	Ensure you are entering your password based on what you recorded in your existing password manager.
 	If you can't confirm it successfully here, click the [<-] in the upper left-hand corner of the window to go back to the previous screen.

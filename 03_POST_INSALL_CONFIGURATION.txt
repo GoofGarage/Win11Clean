@@ -1,5 +1,5 @@
 The default Windows 11 experience has a memory commit charge of ~2.3GB, and has ~136 running processes.
-When we are done, we will have reduced this to a memory commit charge of ~1.7GB and ~110 running processes.
+When we are done, we will have reduced this to a memory commit charge of ~1.6GB and ~110 running processes.
 We will do some cleanup to further trim things down most for the sake of improving privacy and reducing annoyances.  
 Though there will also be a small measurable performance and power efficiency improvement.
 
@@ -27,41 +27,12 @@ It should also remove the initial commit charge of logging into the Explorer win
 
 	It is likely that at least 6 updates will be found.  
 	They will all start to install automatically.  This is intended.
-	The, "2023-04 Cumulative Update for Windows 11 22H2 for x64-based Systems" will take the longest.  Possibly up to 15 minutes.
+	The, "2023-07 Cumulative Update for Windows 11 22H2 for x64-based Systems" will take the longest.  Possibly up to 15 minutes.
 
 3.	Click the [Restart now] button.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 1.2		Post-installation: Windows Update, Part 2
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-This is the first time you will need to log in to Windows with your local account.
-After all future restarts, you will continue to authenticate before logging in.
-
-1.	In the search box, type "Check for Updates", then click the, [Check for updates, System settings] Best match.
-2.	Click the [Check for updates] button.
-
-	It is possible that at least one update will be found.  
-	If so, they will all start to install automatically.  This is intended.
-
-3.	Click the [Download & install] button next to "2023-04 Cumulative Update for Windows 11 22H2 for x64-based Systems".
-	This may take up to 10 minutes to download and install.
-
-3.	Click the [Restart now] button.
-
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.3		Post-installation: Windows Update, Part 3
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, type "Check for Updates", then click the, [Check for updates, System settings] Best match.
-2.	Click the [Check for updates] button.
-
-	It is possible that no further updates are found.
-	If updates are found, they will all start to install automatically.  This is intended.
-
-3.	If updates are found, let them install, then click the [Restart now] button.
-	This is the last time that Windows will need to restart after installing updates.
-
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.4		Post-installation: Windows Update, Part 4
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 Instead of installing any more updates (they should be done), we'll now customize how Windows 11 handles updates.  
 We'll ensure that Windows only installs updates when you're ready, and won't forcibly restart your computer.
@@ -73,7 +44,7 @@ We'll ensure that Windows only installs updates when you're ready, and won't for
 5.	Close the "Settings" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.5.1	Turn off Automatic Restarts
+-- 1.3.1	Turn off Automatic Restarts
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 4.	Press the "Windows Key + R" keyboard shortcut.
 5.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
@@ -83,7 +54,7 @@ We'll ensure that Windows only installs updates when you're ready, and won't for
 8.	On the "Turn off auto-restart for..." dialog, select [Enabled], then click the [OK] button.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.5.2	Turn off Automatic Updating
+-- 1.3.2	Turn off Automatic Updating
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 Here we're going to disable the ability for Windows to automatically attempt to download and install updates.
 This is mostly recommended to guarantee system stability, but it will require you to update your computer yourself to stay secure.
@@ -107,7 +78,7 @@ updates, or for news to travel about how updates might adversely affect you, giv
 
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 2.1		Post-installation: Move Taskbar Icons to Left
+-- 2.1.1	Post-installation: Move Taskbar Icons to Left
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 For those used to having their Windows Start button and taskbar buttons aligned to the left, this will restore that behavior, as well as give you an opportunity to clean up the taskbar.
 
@@ -115,6 +86,11 @@ For those used to having their Windows Start button and taskbar buttons aligned 
 2.	Click [Taskbar Settings]
 3.	Click and expand [Taskbar behaviors].
 4.	Change the "Taskbar alignment" to [Left].
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 2.1.2	Post-installation: Show Seconds in System Tray Clock
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+5.	Click to enable the checkbox next to, "Show seconds in system tray clock (uses more power)."
 
 Most power users will may also want to disable Taskbar items such as [Task View], [Widgets] and [Chat].
 
@@ -127,7 +103,7 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	In the search box, type "Start Settings", then click the, [Start Settings, System settings] match
 2.	Under "Layout" change from "Default" to [More pins].
-3.	You may wish to set "Show recently added apps" and "Show recently opened items..." to [Off].
+3.	You may wish to set "Show recently added apps", "Show recommendations for tips, shortcuts..." and "Show recently opened items..." to [Off].
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.2.1	Post-installation: Disable ads in the Settings app
@@ -152,8 +128,7 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 	Uncheck [Hide extensions for known file types].
 
 6.	Click the [Apply to Folders] button.  When prompted, click the [Yes] button.
-7.	Click the [Apply] button.
-8.	Click the [OK] button to close the "Folder Options" dialog box.
+7.	Click the [OK] button to close the "Folder Options" dialog box.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.2.3	Post-installation: Disable ads shown as notifications
@@ -194,6 +169,7 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 7.	Click on [General] (4th from top) in the right hand panel.
 8.	Set "Let websites show me locally relevant content..." to [Off].
 9.	Set "Let Windows improve Start and search results..." to [Off].
+10.	Click the "Clear History" button.  When prompted, click the "Clear" button.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.5.2	Post-installation: Disable Data Collection
@@ -354,7 +330,7 @@ The terminal app should still be open if you only closed the "Settings" tab, and
 2.	If you want to save a full list of all Apps installed for all users, run this command, replacing <USERNAME> with your account's username.
 	Typing or copy-pasting the following command will put a text file on your desktop named [Apps.txt] containing the output of the command.
 
-	Get-AppxPackage -AllUsers > C:\Users\TEMP\Desktop\Apps.txt
+	Get-AppxPackage -AllUsers > C:\Users\<USERNAME>\Desktop\Apps.txt
 
 	You may wish to inspect this file yourself to ensure there's not anything new (not in the below list) that you want to remove.
 	Be careful about removing something made by Microsoft -- a lot of the stuff at the top may result in things breaking if you remove them.
@@ -433,6 +409,9 @@ The following apps are ones you may wish to remove, depending on your needs...
 	ESPN
 	Instagram
 	Kindle
+	LinkedIn
+	Messenger
+	Netflix
 	Prime Video
 	Spotify
 	TikTok
@@ -460,6 +439,7 @@ PowerShell will get forcibly updated eventually, but you might as well take adva
 1.	In the search box, type "Terminal", then click the [Terminal] match.
 
 2.	Type or copy-paste the following command:		winget install Microsoft.PowerShell
+3.	Enter 'y', then press the ENTER key to agree to the source agreement for the Winget source.
 
 Proceed with the installer.
 
@@ -486,10 +466,16 @@ It is likely you don't prefer Microsoft Edge.  Here's how to install browsers wi
 
 Repeat the previous two steps for the following entries:
 
+	.htm
+	.html
+	.pdf
 	.shtml
 	.svg
 	.webp
+	.xht
 	.xhtml
+	HTTP
+	HTTPS
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 4.6.1	Post-installation: Re-size Paging File

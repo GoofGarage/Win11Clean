@@ -47,3 +47,8 @@
 
 	After restarting, Setup will continue.  
 	It will then restart again during the process before allowing you to start configuring Windows for the first time.
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 1.6 Continue in "02_OOBE_SETUP.txt"
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+The initial setup bootstrapping process has completed.  Move on to the next section in "02_OOBE_SETUP.txt"

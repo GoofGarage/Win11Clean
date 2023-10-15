@@ -1,5 +1,5 @@
-The default Windows 11 experience has a memory commit charge of ~2.3GB, and has ~136 running processes.
-When we are done, we will have reduced this to a memory commit charge of ~1.6GB and ~110 running processes.
+The default Windows 11 22H2 v2 experience has a memory commit charge of ~2.6GB, and has ~140 running processes.
+When we are done, we will have reduced this to a memory commit charge of ~1.7GB and ~115 running processes.
 We will do some cleanup to further trim things down most for the sake of improving privacy and reducing annoyances.  
 Though there will also be a small measurable performance and power efficiency improvement.
 
@@ -9,15 +9,15 @@ The post-installation guide covers the following topics:
 		+ This can prevent genuinely dangerous issues, like Windows automatically installing drivers that may prove unstable and leave you unable to boot back into Windows
 	* Preventing Windows Update from automatically and forcibly restarting Windows without your explicit permission.
 	* Moving the Windows 11 Taskbar to be aligned to the left (consistent with Windows 95 through Windows 10)
-	* Removing "Suggestions" (adware) from the Start Menu
+	* Removing "Suggestions" (adware) from the Start Menu and Notifications
 	* Disabling advertisements in Settings, File Explorer, and Notifications
 	* Disabling Telemetry that is sent to Microsoft, Advertisers and Third Parties
-	* Disabling Cortana
+	* Disabling Cortana and Co-Pilot
 	* Removing pre-installed Bloatware applications that few ever find useful (you may wish to remove more)
 	* Improving security by having Windows Defender update more frequently, and using MAPS
 
 This will make Windows 11 more familiar, eliminate data collection, and a fair number of background tasks.
-It should also remove the initial commit charge of logging into the Explorer window manager to only about 2GB of memory, which is roughly inline with Windows 10.
+It should also reduce the initial commit charge of logging into the Explorer window manager to only about 2GB of memory, which is roughly inline with Windows 10.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 1.1		Post-installation: Windows Update
@@ -27,21 +27,32 @@ It should also remove the initial commit charge of logging into the Explorer win
 
 	It is likely that at least 6 updates will be found.  
 	They will all start to install automatically.  This is intended.
-	The, "2023-07 Cumulative Update for Windows 11 22H2 for x64-based Systems" will take the longest.  Possibly up to 15 minutes.
+	The, "2023-010 Cumulative Update for Windows 11 22H2 for x64-based Systems" will take the longest.  Possibly up to 15 minutes.
 
-3.	Click the [Restart now] button.
+3.	When all updates are Completed or Pending Restart, click the [Restart now] button.
+
+	The restart will take several minutes, and the post-restart update process will inform you of its progress.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 1.2		Post-installation: Windows Update, Part 2
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+1.	You will need to log in to Windows with your username and password for the first time.
+2.	In the search box, type "Check for Updates", then click the, [Check for updates, System settings] Best match.
+3.	Click the [Check for updates] button.
+
+	It is likely that at least 3 or 4 updates will be found.  
+	They will all start to install automatically.  This is intended.
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 1.3		Post-installation: Windows Update, Part 3
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 Instead of installing any more updates (they should be done), we'll now customize how Windows 11 handles updates.  
 We'll ensure that Windows only installs updates when you're ready, and won't forcibly restart your computer.
 
-1.	In the search box, type "Check for Updates", then click the, [Check for updates, System settings] Best match.
-2.	Click the [Advanced options] button.
-3.	Set "Receive updates for other Microsoft products" to [On].
-4.	Set "Notify me when a restart is required to finish updating" to [On].
-5.	Close the "Settings" window.
+1.	Click the [Advanced options] button, which is the 4th section from the top.
+2.	Set "Receive updates for other Microsoft products" (first option from top) to [On].
+3.	Set "Notify me when a restart is required to finish updating" (fourth option from top) to [On].
+4.	Close the "Settings" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 1.3.1	Turn off Automatic Restarts
@@ -50,7 +61,7 @@ We'll ensure that Windows only installs updates when you're ready, and won't for
 5.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
 6.	In the "Local Group Policy Editor" window, navigate to the following path in the left sidebar: 
 	[Computer Configuration] > [Administrative Templates] > [Windows Components] > [Windows Update] > [Manage end user experience]
-7.	In the right hand pane, double-click [Turn off auto-restart for updates during active hours].
+7.	In the right hand pane, double-click [Turn off auto-restart for updates during active hours].  You may also want to change the active hours.
 8.	On the "Turn off auto-restart for..." dialog, select [Enabled], then click the [OK] button.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -92,7 +103,9 @@ For those used to having their Windows Start button and taskbar buttons aligned 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 5.	Click to enable the checkbox next to, "Show seconds in system tray clock (uses more power)."
 
-Most power users will may also want to disable Taskbar items such as [Task View], [Widgets] and [Chat].
+Most power users will may also want to disable Taskbar items such as [Task View], [Widgets] and [Chat], which can be found at the top of the window.
+
+6.	Close the Settings window.
 
 
 
@@ -108,7 +121,7 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.2.1	Post-installation: Disable ads in the Settings app
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
+1.	Open the [Settings] app (it should already be open).
 2.	Click on [Privacy & security] in the left-hand panel.
 3.	Click on [General] in the right-hand panel (4th from top).
 4.	Set "Let websites show me locally relevant content by accessing my language list" to [Off].
@@ -120,15 +133,19 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 1.	Open the [File Explorer].
 2.	Click the three horizontal dots [...] on the far right side of the menu bar
 3.	Click [Options].
-4.	Open the [View] tab.
-5.	Uncheck [Show sync provider notifications].
 
-6.	The following are strong non-privacy-related suggestions, but are not required:
+4. 	Optionally uncheck, "Show frequently used folders" and "Show files from Office.com" if desired.
+
+5.	Open the [View] tab.
+6.	Uncheck [Show sync provider notifications].
+
+7.	The following are strong non-privacy-related suggestions, but are not required:
 
 	Uncheck [Hide extensions for known file types].
 
-6.	Click the [Apply to Folders] button.  When prompted, click the [Yes] button.
-7.	Click the [OK] button to close the "Folder Options" dialog box.
+8.	Click the [Apply to Folders] button.  When prompted, click the [Yes] button.
+9.	Click the [OK] button to close the "Folder Options" dialog box.
+10.	Close File Explorer.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.2.3	Post-installation: Disable ads shown as notifications
@@ -155,7 +172,18 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 2.	Click on [Time & language] in the left-hand pane.
 3.	Click "Date & time" in the right-hand pane.
 4.	Next to "Time zone" choose the correct time zone for your location.
-5.	Click the [Sync now] button.
+5.	Click the [Sync now] button under "Additional Settings"
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 3.4.2	Post-installation: Disable Typing Insights
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+Typing Insights are stored on device and not set to Microsoft, but it represents a potential attack vector.  Power users may wish to disable them.
+
+1.	Open the [Settings] app.
+2.	Click on [Time & language] in the left-hand pane.
+3.	Click "Typing" (3rd from the top) in the right-hand pane.
+4.	Click "Typing insights" (6th from the top)
+5.	Toggle "Typing insights" from On to [Off.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.5.1	Post-installation: Disable Additional Diagnostic Data
@@ -163,13 +191,12 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 1.	Open the [Settings] app.
 2.	Click on [Privacy and Security] in the left-hand panel.
 3.	Click on [Activity History] (8th from top) in the right hand pane.
-4.	Uncheck, [Store my activity history on this device].
-5.	Click the "Clear" button under Clear Activity History, then click the [Clear] button.
+4.	Toggle, [Store my activity history on this device] from On to [Off].
+5.	Click the "Clear history" button under Clear Activity History, then click the [Clear] button.
 6.	Click the [<-] arrow in the top-right hand corner of the "Settings" window.
 7.	Click on [General] (4th from top) in the right hand panel.
-8.	Set "Let websites show me locally relevant content..." to [Off].
-9.	Set "Let Windows improve Start and search results..." to [Off].
-10.	Click the "Clear History" button.  When prompted, click the "Clear" button.
+8.	Ensure "Let websites show me locally relevant content..." is set to [Off].
+9.	Ensure "Let Windows improve Start and search results..." is set to [Off].
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.5.2	Post-installation: Disable Data Collection
@@ -177,12 +204,21 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 1.	Press the "Windows Key + R" keyboard shortcut.
 2.	In the "Run" dialog enter, "regedit" then click the [OK] button.
 3.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection .
-4.	Click anywhere in the right pane, select [New], select [DWORD (64-bit)] and name it "AllowTelemetry".
+4.	Click anywhere in the right pane, select [New], select [DWORD (32-bit)] and name it "AllowTelemetry".
 5.	Ensure the value of "AllowTelemetry" is set to "0".
-6.	Close the "Registry Editor" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.3	Post-installation: Disable the Telemetry Services
+-- 3.5.3	Post-installation: Disable Windows Copilot
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+1.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\
+2.	Click anywhere in the right pane, select [New], select [Key] and name it "WindowsCopilot".
+3.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot .
+4.	Click anywhere in the right pane, select [New], select [DWORD (32-bit)] and name it "TurnOffWindowsCopilot".
+5.	Double click "TurnOffWindowsCopilot", set the value to 1, then click the [OK] button.
+6.	Close the Registry Editor window.
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 3.5.4	Post-installation: Disable the Telemetry Services
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Press the "Windows Key + R" keyboard shortcut.
 2.	In the "Run" dialog enter, "services.msc" then click the [OK] button.
@@ -196,7 +232,7 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 10.	Close the "Services" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.4	Post-installation: Disable the Customer Experience Improvement Program
+-- 3.5.5	Post-installation: Disable the Customer Experience Improvement Program
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	In the search box, search for "Task Scheduler", then click the [Task Scheduler app] match.
 2.	In the left-hand pane, navigate to [Task Scheduler Library] > [Microsoft] > [Windows] > then click in [Customer Experience Improvement Program].
@@ -204,14 +240,13 @@ Most power users will may also want to disable Taskbar items such as [Task View]
 4.	Close the "Task Scheduler" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.6.1	Post-installation: Disable Cortana
+-- 3.6.1	Post-installation: Uninstall Cortana
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Open the [Settings] app.
-2.	Click on [Apps] (5th from top) in the left-hand pane.
+2.	Click on [Apps] (6th from top) in the left-hand pane.
 3.	Click on [Installed apps] (top-most item) in the right-hand pane.
-4.	Find "Cortana" then click the [...] on the right, then click, [Advanced Options].
-5.	Turn the Microphone "App permissions" to [Off].
-6.	Set "Let this app run in background" to [Never].
+4.	Find "Cortana" then click the [...] on the right, then click, [Uninstall].
+5. 	Click the [Uninstall] button.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.6.2	Post-installation: Disable Cortana in the Registry
@@ -278,7 +313,7 @@ Yes, we genuinely have to do it here too.
 4.	Set "Microsoft account" to [Off].
 5.	Set "Work or School account" to [Off].
 6.	Click the [Clear device search history] button.
-7.	Set "Show search highlights" to [Off].
+7.	Ensure "Show search highlights" is set to [Off].
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.8.1	Post-installation: Restart to apply Group Policy setting changes
@@ -412,6 +447,7 @@ The following apps are ones you may wish to remove, depending on your needs...
 	LinkedIn
 	Messenger
 	Netflix
+	Outlook
 	Prime Video
 	Spotify
 	TikTok
@@ -429,7 +465,7 @@ The following apps are ones you may wish to remove, depending on your needs...
 3.	Type or copy-paste the following command:		dism /online /cleanup-image /analyzecomponentstore
 
 	This will inform you of how much space is still taken up by your local deployment image.
-	At this point it may be under 7GB, whereas in your initial installation it was closer to 20GB.
+	At this point it may be about 8GB, whereas in your initial installation it was closer to 20GB.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 4.3.1	Post-installation: Install Windows PowerShell
@@ -439,7 +475,7 @@ PowerShell will get forcibly updated eventually, but you might as well take adva
 1.	In the search box, type "Terminal", then click the [Terminal] match.
 
 2.	Type or copy-paste the following command:		winget install Microsoft.PowerShell
-3.	Enter 'y', then press the ENTER key to agree to the source agreement for the Winget source.
+3.	Enter 'Y', then press the ENTER key to agree to the source agreement for the Winget source.
 
 Proceed with the installer.
 
@@ -476,6 +512,8 @@ Repeat the previous two steps for the following entries:
 	.xhtml
 	HTTP
 	HTTPS
+
+6.	Close the Settings window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 4.6.1	Post-installation: Re-size Paging File
@@ -576,19 +614,27 @@ Moreover, ensuring your paging file is a fixed size will help to minimize fragme
 4.	Close the Terminal application window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.5.1 	Windows 11 Hardening: Install Microsoft Defender Application Guard for Microsoft Edge
+-- 5.5.1 	Windows 11 Hardening: Improve Exploit Protection Defaults
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+1.	In the search box, type "Windows Security", then click the, [Windows Security, System Settings] match.
+2.	Click the blue link, "Exploit protection settings" in the right-hand pane under "Exploit Protection".
+3.	Change the value for "Control flow guard (CFG)" to [On by default].  Click the [Yes] button when prompted to confirm the change.
+4.	Change the value for "Control flow guard (CFG)" to [On by default].  Click the [Yes] button when prompted to confirm the change.
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 5.5.2 	Windows 11 Hardening: Install Microsoft Defender Application Guard for Microsoft Edge
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 This significantly hardens Microsoft Edge, turning off many of its features in the sake of security.
 These features can always be turned back on -- if you want them back on -- for Microsoft Edge.
 Consider this section completely optional.  Yet if you'd like Edge to exist purely as a hyper-secure browser, consider it.
 
-1.	In the search box, type "Windows Security", then click the, [Windows Security, System Settings] match.
-1.	Click "App & browser control" from the left-hand pane
-2.	Click the [Install Microsoft Defender Application Guard] blue link in the right-hand pane.
-3.	In the "Windows Features" dialog, check [Microsoft Defender Application Guard] then click the [OK] button.
+1.	Click "App & browser control" from the left-hand pane of the "Windows Security" window.
+2.	Click the [Install Microsoft Defender Application Guard] blue link in the right-hand pane under, "Isolated browsing."
+3.	In the "Windows Features" dialog, check [Microsoft Defender Application Guard], click the [Yes] button when prompted to confirm the change, then click the [OK] button.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.5.2	Restart Computer
+-- 5.5.3	Restart Computer
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	You must restart Windows for the above changes to take effect.
 	This is required to complete the rest of the security hardening configuration.

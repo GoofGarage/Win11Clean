@@ -1,5 +1,5 @@
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.1 Boot from ISO, Preparing Setup
+-- 1.1 Boot from ISO or Flash Drive, Preparing Setup
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Ensure the following entries are selected:
 	"Language to install"		      [English (United States)] (or other preferred Language)

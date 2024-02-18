@@ -1,5 +1,5 @@
 The default Windows 11 23H2 v2 experience has a memory commit charge of ~1.8GB, and has ~124 running processes.  This is much leaner than 22H2 v2!
-When we are done, we will have reduced this to a memory commit charge of ~1.8GB and ~110 running processes.
+When we are done, we will have reduced this to a memory commit charge of ~1.7GB and ~110 running processes.
 We will do some cleanup to further trim things down most for the sake of improving privacy and reducing annoyances.  
 Though there will also be a small measurable performance and power efficiency improvement.
 

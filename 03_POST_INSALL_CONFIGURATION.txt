@@ -184,7 +184,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 2.	Click on [Time & language] in the left-hand pane.
 3.	Click "Typing" (3rd from the top) in the right-hand pane.
 4.	Click "Typing insights" (6th from the top)
-5.	Toggle "Typing insights" from On to [Off.
+5.	Toggle "Typing insights" from On to [Off].
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 3.5.1	Post-installation: Disable Additional Diagnostic Data
@@ -218,7 +218,14 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 6.	Close the Registry Editor window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.4	Post-installation: Disable the Telemetry Services
+-- 3.5.4	Post-installation: Disable Windows Copilot Preview in Taskbar
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+1.	Open the [Settings] app.
+2.	Click on [Personalization] in the left-hand panel.
+5.	Toggle "Copilot (preview)" from On to [Off].
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 3.5.5	Post-installation: Disable the Telemetry Services
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Press the "Windows Key + R" keyboard shortcut.
 2.	In the "Run" dialog enter, "services.msc" then click the [OK] button.
@@ -232,7 +239,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 10.	Close the "Services" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.5	Post-installation: Disable the Customer Experience Improvement Program
+-- 3.5.6	Post-installation: Disable the Customer Experience Improvement Program
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	In the search box, search for "Task Scheduler", then click the [Task Scheduler app] match.
 2.	In the left-hand pane, navigate to [Task Scheduler Library] > [Microsoft] > [Windows] > then click in [Customer Experience Improvement Program].

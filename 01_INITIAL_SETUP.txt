@@ -44,7 +44,7 @@ As of this release, using ISO "Win11_23H2_<Language>_x64v2.iso"  is the recommen
 
 	At this time, Windows will create a UEFI boot partition, a recovery partition, and will copy the installation files to local storage to be used by the rest of the installation process.
 	
-	This will take up to 3 minutes.
+	This will take up to 3 minutes on a modern solid state drive.
 
 3.	The Windows Setup will now restart the computer in 10 seconds.  Optionally, you can click the [Restart now] button.
 

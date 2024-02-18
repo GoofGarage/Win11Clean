@@ -1,6 +1,9 @@
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 1.1 Boot from ISO or Flash Drive, Preparing Setup
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+As of this release, using ISO "Win11_23H2_<Language>_x64v2.iso"  is the recommended starting point for new installations.
+
 1.	Ensure the following entries are selected:
 	"Language to install"		      [English (United States)] (or other preferred Language)
 	"Time and currency format"		[English (United States)] (or other preferred Time and Currency formats)

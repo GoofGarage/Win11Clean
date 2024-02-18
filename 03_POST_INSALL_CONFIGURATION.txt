@@ -208,7 +208,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 5.	Ensure the value of "AllowTelemetry" is set to "0".
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.3	Post-installation: Disable Windows Copilot
+-- 3.5.3	Post-installation: Disable Windows Copilot in Registry
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\
 2.	Click anywhere in the right pane, select [New], select [Key] and name it "WindowsCopilot".
@@ -218,14 +218,24 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 6.	Close the Registry Editor window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.4	Post-installation: Disable Windows Copilot Preview in Taskbar
+-- 3.5.4	Post-installation: Disable Windows Copilot in Group Policy
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+1.	Press the "Windows Key + R" keyboard shortcut.
+2.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
+3.	In the Local Group Policy Editor window, move to the following path in the left sidebar: [User Configuration] > [Administrative Templates] > [Windows Components] > [Windows Copilot]
+4.	In the right hand pane, double-click [Turn off Windows Copilot].
+5.	On the "Turn off Windows Copilot" dialog, select [Enabled], then click the [OK] button.
+6.	Close the Local Group Policy Editor window.
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- 3.5.5	Post-installation: Disable Windows Copilot Preview in Taskbar
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Open the [Settings] app.
 2.	Click on [Personalization] in the left-hand panel.
 5.	Toggle "Copilot (preview)" from On to [Off].
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.5	Post-installation: Disable the Telemetry Services
+-- 3.5.6	Post-installation: Disable the Telemetry Services
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	Press the "Windows Key + R" keyboard shortcut.
 2.	In the "Run" dialog enter, "services.msc" then click the [OK] button.
@@ -239,7 +249,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 10.	Close the "Services" window.
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.6	Post-installation: Disable the Customer Experience Improvement Program
+-- 3.5.7	Post-installation: Disable the Customer Experience Improvement Program
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 1.	In the search box, search for "Task Scheduler", then click the [Task Scheduler app] match.
 2.	In the left-hand pane, navigate to [Task Scheduler Library] > [Microsoft] > [Windows] > then click in [Customer Experience Improvement Program].

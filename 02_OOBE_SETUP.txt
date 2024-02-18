@@ -12,8 +12,6 @@
 
 3.	When prompted, "Want to add a second keyboard layout?", click the [Skip] button.
 
-	Setup will restart.  After restarting, Setup will continue.
-
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 -- 1.3 Out of Box Experience, Hostname
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----

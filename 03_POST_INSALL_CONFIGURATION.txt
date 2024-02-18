@@ -456,6 +456,8 @@ The following apps are ones you may wish to remove, depending on your needs...
 	Quick Assist				(if you will never allow others remote access to your computer for IT help desk purposes)
 	Sticky Notes				(virtual sticky notes.  some may want to keep this app around)
 	Tips
+	Voice Recorder				(if you don't want a Voice Recorder app)
+	Weather					(if you don't want Weather widgets)
 	Xbox Live				(if you do not intend to use Microsoft Game Pass functionality.  Always leave the other Xbox applications installed!)
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----

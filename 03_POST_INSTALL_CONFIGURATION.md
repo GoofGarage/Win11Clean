@@ -1,264 +1,259 @@
-The default Windows 11 23H2 v2 experience has a memory commit charge of ~1.8GB, and has ~124 running processes.  This is much leaner than 22H2 v2!
-When we are done, we will have reduced this to a memory commit charge of ~1.7GB and ~110 running processes.
-We will do some cleanup to further trim things down most for the sake of improving privacy and reducing annoyances.  
-Though there will also be a small measurable performance and power efficiency improvement.
+# Windows 11 23H2v2 Post-Install Configuration
 
-The post-installation guide covers the following topics:
+---
 
-	* Only having Windows Update install updates when you choose to, and not automatically.
-		+ This can prevent genuinely dangerous issues, like Windows automatically installing drivers that may prove unstable and leave you unable to boot back into Windows
-	* Preventing Windows Update from automatically and forcibly restarting Windows without your explicit permission.
-	* Moving the Windows 11 Taskbar to be aligned to the left (consistent with Windows 95 through Windows 10)
-	* Removing "Suggestions" (adware) from the Start Menu and Notifications
-	* Disabling advertisements in Settings, File Explorer, and Notifications
-	* Disabling Telemetry that is sent to Microsoft, Advertisers and Third Parties
-	* Disabling Cortana and Co-Pilot
-	* Removing pre-installed Bloatware applications that few ever find useful (you may wish to remove more)
-	* Improving security by having Windows Defender update more frequently, and using MAPS
+The default experience has a memory commit charge of ~1.8GB, and has ~124 running processes -- much leaner than 22H2v2!  
+When we are done, we will have reduced this to a memory commit charge of ~1.7GB and ~110 running processes.  
+We will do some cleanup to further trim things down most for the sake of improving privacy and reducing annoyances.    
+Though there will also be a small measurable performance and power efficiency improvement.  
+
+The post-installation guide covers the following topics:  
+
+  * Only having Windows Update install updates when you choose to, and not automatically.
+
+   This can prevent genuinely dangerous issues, like Windows automatically installing drivers that may prove unstable and leave you unable to boot back into Windows
+
+  * Preventing Windows Update from automatically and forcibly restarting Windows without your explicit permission.  
+  * Moving the Windows 11 Taskbar to be aligned to the left _(consistent with Windows 95 through Windows 10)_  
+  * Removing "Suggestions" (adware) from the Start Menu and Notifications  
+  * Disabling advertisements in Settings, File Explorer, and Notifications  
+  * Disabling Telemetry that is sent to Microsoft, Advertisers and Third Parties  
+  * Disabling Cortana and Copilot  
+  * Removing pre-installed Bloatware applications that few ever find useful _(you may wish to remove more)_  
+  * Improving security by having Windows Defender update more frequently, and using MAPS  
 
 This will make Windows 11 more familiar, eliminate data collection, and a fair number of background tasks.
 It should also reduce the initial commit charge of logging into the Explorer window manager to only about 2GB of memory, which is roughly inline with Windows 10.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.1		Post-installation: Windows Update
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, type "Check for Updates", then click the, [Check for updates, System settings] Best match.
-2.	Click the [Check for updates] button.
+---
 
-	It is likely that at least 5 updates will be found.  
-	They will all start to install automatically.  This is intended.
-	The, "2024-02 Cumulative Update for Windows 11 Version 23H2 for x64-based Systems" will take the longest.  Possibly up to 15 minutes.
+## 1.1 Post-installation: Windows Update
 
-3.	When all updates are Completed or Pending Restart, click the [Restart now] button.
+1. In the search box, type ***"Check for Updates"***, then click the, ***"Check for updates, System settings"*** best match.
+2. Click the ***"Check for updates"*** button.
 
-	The restart will take several minutes, and the post-restart update process will inform you of its progress.
+   It is likely that at least 5 updates will be found.  
+   They will all start to install automatically.  This is intended.  
+   The, ***"2024-02 Cumulative Update for Windows 11 Version 23H2 for x64-based Systems"*** will take the longest.  Possibly up to 15 minutes.  
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.2		Post-installation: Windows Update, Part 2
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	You will need to log in to Windows with your username and password for the first time.
-2.	In the search box, type "Check for Updates", then click the, [Check for updates, System settings] Best match.
-3.	Click the [Check for updates] button.
+3.  When all updates are Completed or Pending Restart, click the ***"Restart now"*** button.  
 
-	It is likely that at least 1 update will be found.  
-	They will all start to install automatically.  This is intended.
+   The restart will take several minutes, and the post-restart update process will inform you of its progress.  
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.3		Post-installation: Windows Update, Part 3
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+---
+
+## 1.2 Post-installation: Windows Update, Part 2
+
+1. You will need to log in to Windows with your username and password for the first time.
+2. In the search box, type ***"Check for Updates"***, then click the, ***"Check for updates, System settings***" best match.
+3. Click the ***"Check for updates"*** button.
+
+   It is likely that at least 1 update will be found.  
+   They will all start to install automatically.  This is intended.  
+
+---
+
+## 1.3 Post-installation: Windows Update, Part 3
+
 Instead of installing any more updates (they should be done), we'll now customize how Windows 11 handles updates.  
 We'll ensure that Windows only installs updates when you're ready, and won't forcibly restart your computer.
 
-1.	Click the [Advanced options] button, which is the 4th section from the top.
-2.	Set "Receive updates for other Microsoft products" (first option from top) to [On].
-3.	Set "Notify me when a restart is required to finish updating" (fourth option from top) to [On].
-4.	Close the "Settings" window.
+1. Click the ***"Advanced options"*** button, which is the 4th section from the top.
+2. Set ***"Receive updates for other Microsoft products"*** _(first option from top)_ to ***"On"***.
+3. Set ***"Notify me when a restart is required to finish updating"*** _(fourth option from top)_ to ***"On"***.
+4. Close the "Settings" window.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.3.1	Turn off Automatic Restarts
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-4.	Press the "Windows Key + R" keyboard shortcut.
-5.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
-6.	In the "Local Group Policy Editor" window, navigate to the following path in the left sidebar: 
-	[Computer Configuration] > [Administrative Templates] > [Windows Components] > [Windows Update] > [Manage end user experience]
-7.	In the right hand pane, double-click [Turn off auto-restart for updates during active hours].  You may also want to change the active hours.
-8.	On the "Turn off auto-restart for..." dialog, select [Enabled], then click the [OK] button.
+## 1.3.1 Turn off Automatic Restarts
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 1.3.2	Turn off Automatic Updating
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-Here we're going to disable the ability for Windows to automatically attempt to download and install updates.
-This is mostly recommended to guarantee system stability, but it will require you to update your computer yourself to stay secure.
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
+3. In the "Local Group Policy Editor" window, navigate to the following path in the left sidebar:
 
+  [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Windows Update] > [Manage end user experience]  
+  
+5. In the right hand pane, double-click ***"Turn off auto-restart for updates during active hours"***.  Optionally also change the active hours.
+6. On the ***"Turn off auto-restart for..."*** dialog, select ***"Enabled"***, then click the ***"OK"*** button.
+
+## 1.3.2 Turn off Automatic Updating
+
+Here we're going to disable the ability for Windows to automatically attempt to download and install updates.  
+This is mostly recommended to guarantee system stability, but it will require you to update your computer yourself to stay secure.  
+  
 Microsoft generally releases patches on the 2nd Tuesday of the month.  This is known by IT professionals as, "Patch Tuesday".
 
-!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!!
-!! If you are going to disable Automatic Updating, you should set a reminder for the 17th of every month, to remind yourself to install updates. !!
-!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!! !!!!!
+# If you disable Automatic Updating, you should set a reminder for the 17th of every month, to remind yourself to install updates.
 
-The 17th of the month is guaranteed to be at LEAST 72 hours after "Patch Tuesday", giving ample time for Microsoft to pull problematic
+The 17th of the month is guaranteed to be at **LEAST** 72 hours after _"Patch Tuesday"_, giving ample time for Microsoft to pull problematic
 updates, or for news to travel about how updates might adversely affect you, giving you time to make an informed decision.
 
-9.	In the right hand pane, double-click [Configure Automatic Updates]
-10.	On the "Configure Automatic Updates" dialog, select [Disabled] then click the [OK] button.
+1. In the right hand pane, double-click ***"Configure Automatic Updates"***
+2. On the ***"Configure Automatic Updates"*** dialog, select ***"Disabled"*** then click the ***"OK"*** button.
+3. Close the "Local Group Policy Editor" window.
 
-11.	Close the "Local Group Policy Editor" window.
+---
 
+## 2.1.1 Post-installation: Move Taskbar Icons to Left
 
-
-
-
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 2.1.1	Post-installation: Move Taskbar Icons to Left
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 For those used to having their Windows Start button and taskbar buttons aligned to the left, this will restore that behavior, as well as give you an opportunity to clean up the taskbar.
 
-1.	Right-click anywhere on the Windows Taskbar.
-2.	Click [Taskbar Settings]
-3.	Click and expand [Taskbar behaviors] (at the bottom of the right-hand side).
-4.	Change the "Taskbar alignment" to [Left].
+1. Right-click anywhere on the Windows Taskbar.
+2. Click ***"Taskbar Settings"***
+3. Click and expand ***"Taskbar behaviors"*** _(at the bottom of the right-hand side)_.
+4. Change the ***"Taskbar alignment"*** to ***"Left"***.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 2.1.2	Post-installation: Show Seconds in System Tray Clock
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-5.	Click to enable the checkbox next to, "Show seconds in system tray clock (uses more power)."
+## 2.1.2 Post-installation: Show Seconds in System Tray Clock
 
-Most power users will may also want to disable Taskbar items such as [Task View], [Widgets] and [Chat], which can be found at the top of the window.
+1. Click to enable the checkbox next to, ***"Show seconds in system tray clock (uses more power)."***
 
-6.	Close the Settings window.
+You may also want to disable Taskbar items such as ***"Task View"***, ***"Widgets"*** and ***"Chat"***, which can be found at the top of the window.  
 
+2. Close the Settings window.
 
+---
 
+## 3.1 Post-installation: Customize Start Menu
 
+1. In the search box, type ***"Start Settings"***, then click the, ***"Start Settings, System settings"*** match
+2. Under ***"Layout"*** change from ***"Default"*** to ***"More pins"***.
+3. You may wish to set ***"Show recently added apps"***, ***"Show recommendations for tips, shortcuts..."*** and ***"Show recently opened items..."*** to ***"Off"***.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.1		Post-installation: Customize Start Menu
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, type "Start Settings", then click the, [Start Settings, System settings] match
-2.	Under "Layout" change from "Default" to [More pins].
-3.	You may wish to set "Show recently added apps", "Show recommendations for tips, shortcuts..." and "Show recently opened items..." to [Off].
+---
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.2.1	Post-installation: Disable ads in the Settings app
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app (it should already be open).
-2.	Click on [Privacy & security] in the left-hand panel.
-3.	Click on [General] in the right-hand panel (3rd from top).
-4.	Set "Let websites show me locally relevant content by accessing my language list" to [Off].
-5.	Set "Show me suggested contect in the Settings app" to [Off].
-6.	Close the Settings window.
+## 3.2.1 Post-installation: Disable ads in the Settings app
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.2.2	Post-installation: Disable ads in the File Explorer
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [File Explorer].
-2.	Click the three horizontal dots [...] on the far right side of the menu bar
-3.	Click [Options].
+1. Open the ***"Settings"*** app _(it should already be open)_.
+2. Click on ***"Privacy & security"*** in the left-hand panel.
+3. Click on ***"General"*** in the right-hand panel _(3rd from top)_.
+4. Set ***"Let websites show me locally relevant content by accessing my language list"*** to ***"Off"***.
+5. Set ***"Show me suggested contect in the Settings app"*** to ***"Off"***.
+6. Close the "Settings" window.
 
-4. 	Optionally uncheck, "Show frequently used folders" and "Show files from Office.com" if desired.
+## 3.2.2 Post-installation: Disable ads in the File Explorer
 
-5.	Open the [View] tab.
-6.	Uncheck [Show sync provider notifications].
+1. Open the [File Explorer].
+2. Click the three horizontal dots ***"..."*** on the far right side of the menu bar
+3. Click ***"Options"***.
 
-7.	The following are strong non-privacy-related suggestions, but are not required:
+4. Optionally uncheck, ***"Show frequently used folders"*** and ***"Show files from Office.com"*** if desired.
 
-	Uncheck [Hide extensions for known file types].
+5. Open the ***"View"*** tab.
+6. Uncheck ***"Show sync provider notifications"***.
 
-8.	Click the [Apply to Folders] button.  When prompted, click the [Yes] button.
-9.	Click the [OK] button to close the "Folder Options" dialog box.
-10.	Close File Explorer.
+7. The following are strong non-privacy-related suggestions, but are not required:
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.2.3	Post-installation: Disable ads shown as notifications
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [System] in the left-hand pane.
-3.	Click on [Notifications] (3rd from top) in the right-hand pane.
-4.	Click on the [Additional settings] button (at the bottom) to expand it.
-5.	Uncheck, [Show the Windows welcome experience...].
-6.	Uncheck, [Suggest ways to get the most out of Windows...].
-7.	Uncheck, [Get tips and suggestions when I use Windows].
+   Uncheck ***"Hide extensions for known file types"***.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.3.1	Post-installation: Disable feedback requests
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [Privacy & security] in the left-hand pane.
-3.	Under Diagnostics & Feedback (6th from the top), change the "Feedback frequency" to [Never].
+8. Click the ***"Apply to Folders"*** button.  When prompted, click the ***"Yes"*** button.
+9. Click the ***"OK"*** button to close the ***"Folder Options"*** dialog box.
+10. Close "File Explorer".
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.4.1	Post-installation: Set time zone
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [Time & language] in the left-hand pane.
-3.	Click "Date & time" in the right-hand pane.
-4.	Next to "Time zone" choose the correct time zone for your location.
-5.	Click the [Sync now] button under "Additional Settings"
+## 3.2.3 Post-installation: Disable ads shown as Notifications
+1. Open the ***"Settings"*** app.
+2. Click on ***"System"*** in the left-hand pane.
+3. Click on ***"Notifications"*** _(3rd from top)_ in the right-hand pane.
+4. Click on the ***"Additional settings"*** button _(at the bottom)_ to expand it.
+5. Uncheck, ***"Show the Windows welcome experience..."***.
+6. Uncheck, ***"Suggest ways to get the most out of Windows..."***.
+7. Uncheck, ***"Get tips and suggestions when I use Windows"***.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.4.2	Post-installation: Disable Typing Insights
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+---
+
+## 3.3.1 Post-installation: Disable feedback requests 
+1. Open the ***"Settings"*** app.
+2. Click on ***"Privacy & security"*** in the left-hand pane.
+3. Under ***"Diagnostics & Feedback"*** _(6th from the top)_, change the ***""Feedback frequency"*** to ***"Never"***.
+
+---
+
+## 3.4.1 Post-installation: Set time zone
+1. Open the ***"Settings"*** app.
+2. Click on ***"Time & language"*** in the left-hand pane.
+3. Click ***"Date & time"*** in the right-hand pane.
+4. Next to ***"Time zone"*** _choose the correct time zone for your location_.
+5. Click the ***"Sync now"*** button under ***"Additional Settings"***
+
+## 3.4.2 Post-installation: Disable Typing Insights
+
 Typing Insights are stored on device and not set to Microsoft, but it represents a potential attack vector.  Power users may wish to disable them.
 
-1.	Open the [Settings] app.
-2.	Click on [Time & language] in the left-hand pane.
-3.	Click "Typing" (3rd from the top) in the right-hand pane.
-4.	Click "Typing insights" (6th from the top)
-5.	Toggle "Typing insights" from On to [Off].
+1. Open the ***"Settings"*** app.
+2. Click on ***"Time & language"*** in the left-hand pane.
+3. Click ***"Typing"*** _(3rd from the top)_ in the right-hand pane.
+4. Click ***"Typing insights"*** _(6th from the top)_
+5. Toggle ***"Typing insights"*** from On to ***"Off"***.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.1	Post-installation: Disable Additional Diagnostic Data
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [Privacy and Security] in the left-hand panel.
-3.	Click on [Activity History] (7th from top) in the right hand pane.
-4.	Toggle, [Store my activity history on this device] from On to [Off].
-5.	Click the "Clear history" button under Clear Activity History, then click the [Clear] button.
-6.	Click the [<-] back arrow in the top-right hand corner of the "Settings" window.
-7.	Click on [General] (3rd from top) in the right hand panel.
-8.	Close the Settings window.
+---
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.2	Post-installation: Disable Data Collection
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Press the "Windows Key + R" keyboard shortcut.
-2.	In the "Run" dialog enter, "regedit" then click the [OK] button.
-3.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection .
-4.	Click anywhere in the right pane, select [New], select [DWORD (32-bit)] and name it "AllowTelemetry".
-5.	Ensure the value of "AllowTelemetry" is set to "0".
+## 3.5.1 Post-installation: Disable Additional Diagnostic Data
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.3	Post-installation: Disable Windows Copilot in Registry
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\
-2.	Click anywhere in the right pane, select [New], select [Key] and name it "WindowsCopilot".
-3.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot .
-4.	Click anywhere in the right pane, select [New], select [DWORD (32-bit)] and name it "TurnOffWindowsCopilot".
-5.	Double click "TurnOffWindowsCopilot", set the value to 1, then click the [OK] button.
-6.	Close the Registry Editor window.
+1. Open the ***"Settings"*** app.
+2. Click on ***"Privacy and Security"*** in the left-hand panel.
+3. Click on ***"Activity History"*** _(7th from top)_ in the right hand pane.
+4. Toggle, ***"Store my activity history on this device"*** from On to ***"Off].
+5. Click the ***"Clear history""*** button under Clear Activity History, then click the ***"Clear"*** button.
+6. Click the ***"<-"*** back arrow in the top-right hand corner of the "Settings" window.
+7. Click on ***"General"*** _(3rd from top)_ in the right hand panel.
+8. Close the "Settings" window.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.4	Post-installation: Disable Windows Copilot in Group Policy
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Press the "Windows Key + R" keyboard shortcut.
-2.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
-3.	In the Local Group Policy Editor window, move to the following path in the left sidebar: [User Configuration] > [Administrative Templates] > [Windows Components] > [Windows Copilot]
-4.	In the right hand pane, double-click [Turn off Windows Copilot].
-5.	On the "Turn off Windows Copilot" dialog, select [Enabled], then click the [OK] button.
-6.	Close the Local Group Policy Editor window.
+## 3.5.2 Post-installation: Disable Data Collection
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.5	Post-installation: Disable Windows Copilot Preview in Taskbar
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [Personalization] in the left-hand panel.
-5.	Toggle "Copilot (preview)" from On to [Off].
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the ***"OK"*** button.
+3. Go to the following path: ***[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]*** .
+4. Click anywhere in the right pane, select ***"New"***, select ***"DWORD (32-bit)"*** and name it ***"AllowTelemetry"***.
+5. Ensure the value of ***"AllowTelemetry"*** is set to ***"0"***.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.6	Post-installation: Disable the Telemetry Services
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Press the "Windows Key + R" keyboard shortcut.
-2.	In the "Run" dialog enter, "services.msc" then click the [OK] button.
-3.	Double-click the [Connected User Experiences and Telemetry] service.
-4.	Click the [Stop] button to stop the service.
-5.	Set the "Startup Type" to [Disabled]
-6.	Click the [OK] button to close the dialog.
-7.	Double-click the [Device Management Wireless Application Protocol (WAP) Push...] service.
-8.	Set the "Startup Type" to [Disabled].
-9.	Click the [OK] button to close the dialog.
-10.	Close the "Services" window.
+## 3.5.3 Post-installation: Disable Windows Copilot in Registry
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.5.7	Post-installation: Disable the Customer Experience Improvement Program
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, search for "Task Scheduler", then click the [Task Scheduler app] match.
-2.	In the left-hand pane, navigate to [Task Scheduler Library] > [Microsoft] > [Windows] > then click in [Customer Experience Improvement Program].
-3.	In the middle pane, select all items in the top grid view, then click the [Disable] button in the bottom-right-hand pane labeled "Selected Items".
-4.	Close the "Task Scheduler" window.
+1. Go to the following path: ***[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\]***
+2. Click anywhere in the right pane, select ***"New"***, select ***"Key"*** and name it ***"WindowsCopilot"***.
+3. Go to the following path: ***[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot]*** 
+4. Click anywhere in the right pane, select ***"New"***, select ***"DWORD (32-bit)"*** and name it ***"TurnOffWindowsCopilot"***.
+5. Double click ***"TurnOffWindowsCopilot"***, set the value to ***"1"***, then click the ***"OK"*** button.
+6. Close the "Registry Editor" window.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.6.1	Post-installation: Uninstall Cortana
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+## 3.5.4 Post-installation: Disable Windows Copilot in Group Policy
+
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
+3. In the Local Group Policy Editor window, move to the following path in the left sidebar:
+
+   [User Configuration] > [Administrative Templates] > [Windows Components] > [Windows Copilot]
+
+4. In the right hand pane, double-click ***"Turn off Windows Copilot"***.
+5. On the "Turn off Windows Copilot" dialog, select ***"Enabled"***, then click the ***"OK"*** button.
+6. Close the "Local Group Policy Editor" window.
+
+## 3.5.5 Post-installation: Disable Windows Copilot Preview in Taskbar
+
+1. Open the ***"Settings"*** app.
+2. Click on ***"Personalization"*** in the left-hand panel.
+3. Toggle ***""Copilot (preview)"*** from On to ***"Off"***.
+
+## 3.5.6 Post-installation: Disable the Telemetry Services
+
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"services.msc"*** then click the ***"OK"*** button.
+3. Double-click the ***"[Connected User Experiences and Telemetry]"*** service.
+4. Click the ***"Stop"*** button to stop the service.
+5. Set the ***"Startup Type"*** to ***"Disabled"***
+6. Click the ***"OK"*** button to close the dialog.
+7. Double-click the ***"Device Management Wireless Application Protocol (WAP) Push..."*** service.
+8. Set the ***"Startup Type"*** to ***"Disabled"***.
+9. Click the ***"OK"*** button to close the dialog.
+10. Close the "Services" window.
+
+## 3.5.7 Post-installation: Disable the Customer Experience Improvement Program
+
+1. In the search box, search for ***"Task Scheduler"***, then click the ***"Task Scheduler app"*** match.
+2. In the left-hand pane, navigate to [Task Scheduler Library] > [Microsoft] > [Windows] > then click on ***"Customer Experience Improvement Program"***.
+3. In the middle pane, select _all items in the top grid view_, then click the ***"Disable"*** button in the bottom-right-hand pane labeled ***"Selected Items"***.
+4. Close the "Task Scheduler" window.
+
+--- 
+
+## 3.6.1 Post-installation: Uninstall Cortana
+
 1.	Open the [Settings] app.
 2.	Click on [Apps] (6th from top) in the left-hand pane.
 3.	Click on [Installed apps] (top-most item) in the right-hand pane.

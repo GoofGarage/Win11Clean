@@ -468,7 +468,7 @@ The following apps are ones you may wish to remove, depending on your needs...
    
   * Microsoft Teams
 
-    _(should already be gone)_
+   _(should already be gone)_  
     
   * Microsoft ToDo
 

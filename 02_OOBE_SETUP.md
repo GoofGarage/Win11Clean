@@ -134,10 +134,10 @@ It is recommended to disable all of the following settings.  You can always sele
   * Change ***"Tailored experiences"*** to ***"No"***.
   * Change ***"Advertising ID"*** to ***"No"***.
 
-2. Click the [Accept] Button.
+2. Click the ***"Accept"*** Button.
 
    Setup will restart.  This will create your user profile and finish configuring Windows.
-   When completed, it will automatically log into your account (just this once) and you'll be presented with the typical Windows 11 "Explorer" window manager experience.
+   When completed, it will automatically log into your account _(just this once)_ and you'll enter the typical Windows 11 "Explorer" window manager experience.
 
    Subsequent reboots will require your password as you would normally expect.
 

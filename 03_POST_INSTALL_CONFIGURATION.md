@@ -22,8 +22,8 @@ The post-installation guide covers the following topics:
   * Removing pre-installed Bloatware applications that few ever find useful _(you may wish to remove more)_  
   * Improving security by having Windows Defender update more frequently, and using MAPS  
 
-This will make Windows 11 more familiar, eliminate data collection, and a fair number of background tasks.
-It should also reduce the initial commit charge of logging into the Explorer window manager to only about 2GB of memory, which is roughly inline with Windows 10.
+This will make Windows 11 more familiar, as well as eliminate data collection and a fair number of background tasks.
+It will also reduce the initial commit charge of logging into the Explorer window manager to under 2GB of memory, which is roughly inline with Windows 10.
 
 ---
 

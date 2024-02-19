@@ -158,7 +158,7 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 
 ---
 
-## 3.3.1 Post-installation: Disable feedback requests 
+## 3.3 Post-installation: Disable feedback requests 
 1. Open the ***"Settings"*** app.
 2. Click on ***"Privacy & security"*** in the left-hand pane.
 3. Under ***"Diagnostics & Feedback"*** _(6th from the top)_, change the ***""Feedback frequency"*** to ***"Never"***.
@@ -234,7 +234,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 
 1. Press the ***"Windows Key + R"*** keyboard shortcut.
 2. In the ***"Run"*** dialog enter, ***"services.msc"*** then click the ***"OK"*** button.
-3. Double-click the ***"[Connected User Experiences and Telemetry]"*** service.
+3. Double-click the ***"Connected User Experiences and Telemetry"*** service.
 4. Click the ***"Stop"*** button to stop the service.
 5. Set the ***"Startup Type"*** to ***"Disabled"***
 6. Click the ***"OK"*** button to close the dialog.
@@ -254,424 +254,485 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 
 ## 3.6.1 Post-installation: Uninstall Cortana
 
-1.	Open the [Settings] app.
-2.	Click on [Apps] (6th from top) in the left-hand pane.
-3.	Click on [Installed apps] (top-most item) in the right-hand pane.
-4.	Find "Cortana" then click the [...] on the right, then click, [Uninstall].
-5. 	Click the [Uninstall] button.
+1. Open the ***"Settings"*** app.
+2. Click on ***"Apps"*** _(6th from top)_ in the left-hand pane.
+3. Click on ***"Installed apps"*** _(top-most item)_ in the right-hand pane.
+4. Find ***"Cortana""*** then click the ***"..."*** on the right, then click, ***"Uninstall"***.
+5. Click the ***"Uninstall"*** button.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.6.2	Post-installation: Disable Cortana in the Registry
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-7.	Press the "Windows Key + R" keyboard shortcut.
-8.	In the "Run" dialog enter, "regedit" then click the [OK] button.
-9.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
-10.	Right-click anywhere in the right-hand pane, click [New] > [Key] and name it "Windows Search"
-11.	Right-click anywhere in the right-hand pane, click [New] > [DWORD (32-bit) Value] and name it "AllowCortana"
-12.	Ensure the value of [AllowCortana] is set to "0".
-13.	Close the "Registry Editor" window
+## 3.6.2 Post-installation: Disable Cortana in the Registry
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.6.3	Post-installation: Disable Cortana in Group Policy
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-14.	Press the "Windows Key + R" keyboard shortcut.
-15.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
-16.	In the Local Group Policy Editor window, move to the following path in the left sidebar: [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Search]
-17.	In the right hand pane, double-click [Allow Cortana].
-18.	On the "Allow Cortana" dialog, select [Disabled], then click the [OK] button.
-19.	In the right hand pane, double-click [Allow Cortana above lock screen].
-20.	On the "Allow Cortana above lock screen" dialog, select [Disabled], then click the [OK] button.
-21.	In the right hand pane, double-click [Allow Cortana Page in OOBE on an AAD account].
-22.	On the "Allow Cortana Page in OOBE on an AAD account" dialog, select [Disabled], then click the [OK] button.
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the ***"OK"*** button.
+3. Go to the following path: ***[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows]***
+4. Right-click anywhere in the right-hand pane, click ***"New"*** > ***"Key"*** and name it ***"Windows Search"***
+5. Right-click anywhere in the right-hand pane, click ***"New"*** > ***"DWORD (32-bit) Value"*** and name it ***"AllowCortana"***
+6. Ensure the value of ***"AllowCortana"*** is set to ***"0"***.
+7. Close the "Registry Editor" window
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.6.4	Post-installation: Disable Web Search from Search Bar in Group Policy
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-23.	Press the "Windows Key + R" keyboard shortcut.
-24.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
-25.	In the Local Group Policy Editor window, move to the following path in the left sidebar: [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Search]
-26.	In the right hand pane, double-click [Allow search and Cortana to use location].
-27.	On the "Allow search and Cortana to use location" dialog, select [Disabled], then click the [OK] button.
-28.	In the right hand pane, double-click [Do not allow web search].
-29.	On the "Do not allow web search" dialog, select [Enabled], then click the [OK] button.
-30.	In the right hand pane, double-click [Don't search the web or display web results in Search].
-31.	On the "Don't search the web or display web results in Search" dialog, select [Enabled], then click the [OK] button.
-32.	In the right hand pane, double-click [Don't search the web or display web results in Search over metered connections].
-33.	On the "Don't search the web or display web results in Search over metered connections, select [Enabled], then click the [OK] button.
-34.	In the right hand pane, double-click [Set what information is shared in Search].
-35.	On the "Set what information is shared in Search" dialog, select [Enabled], then select [Anonymous info] for "Type of information", then click the [OK] button.
+## 3.6.3 Post-installation: Disable Cortana in Group Policy
 
-36.	Close the "Local Group Policy Editor" window.
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
+3. In the Local Group Policy Editor window, move to the following path in the left sidebar:
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.6.5	Post-installation: Disable Web Search from Search Bar in Registry
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+   [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Search]
+   
+4. In the right hand pane, double-click ***"Allow Cortana"***.
+5. On the ***"Allow Cortana"*** dialog, select ***"Disabled"***, then click the ***"OK"*** button.
+6. In the right hand pane, double-click ***"Allow Cortana above lock screen"***.
+7. On the ***"Allow Cortana above lock screen"*** dialog, select ***"Disabled"***, then click the ***"OK"*** button.
+8. In the right hand pane, double-click ***"Allow Cortana Page in OOBE on an AAD account"***.
+9. On the ***"Allow Cortana Page in OOBE on an AAD account***" dialog, select ***"Disabled"***, then click the ***"OK"*** button.
+
+## 3.6.4 Post-installation: Disable Web Search from Search Bar in Group Policy
+
+1. Press the ***"Windows Key + R***" keyboard shortcut.
+2. In the ***"Run***" dialog enter, ***"gpedit.msc***" then click the ***"OK***" button.
+3. In the Local Group Policy Editor window, move to the following path in the left sidebar:
+   
+   [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Search]
+   
+4. In the right hand pane, double-click ***"Allow search and Cortana to use location***".
+5. On the ***"Allow search and Cortana to use location***" dialog, select ***"Disabled***", then click the ***"OK***" button.
+6. In the right hand pane, double-click ***"Do not allow web search***".
+7. On the ***"Do not allow web search"*** dialog, select ***"Enabled***", then click the ***"OK***" button.
+8. In the right hand pane, double-click ***"Don't search the web or display web results in Search***".
+9. On the ***"Don't search the web or display web results in Search"*** dialog, select ***"Enabled***", then click the ***"OK***" button.
+10. In the right hand pane, double-click ***"Don't search the web or display web results in Search over metered connections***".
+11. On the ***"Don't search the web or display web results in Search over metered connections"***, select ***"Enabled***", then click the ***"OK***" button.
+12. In the right hand pane, double-click ***"Set what information is shared in Search***".
+13. On the ***"Set what information is shared in Search"*** dialog, select ***"Enabled***", then select ***"Anonymous info***" for ***"Type of information***", then click the ***"OK***" button.
+
+14. Close the "Local Group Policy Editor" window.
+
+## 3.6.5 Post-installation: Disable Web Search from Search Bar in Registry
+
 Yes, we genuinely have to do it here too.
 
-37.	Press the "Windows Key + R" keyboard shortcut.
-38.	In the "Run" dialog enter, "regedit" then click the [OK] button.
-39.	Go to the following path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
-40.	Right-click anywhere in the right-hand pane, click [New] > [Key] and name it "Explorer"
-41.	Right-click anywhere in the right-hand pane, click [New] > [DWORD (32-bit) Value] and name it "DisableSearchBoxSuggestions".
-42.	Ensure the value of [DisableSearchBoxSuggestions] is set to "1".
-43.	Close the "Registry Editor" window
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the [OK] button.
+3. Go to the following path: ***[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows]***
+4. Right-click anywhere in the right-hand pane, click ***"New"*** > ***"Key"*** and name it ***"Explorer"***
+5. Right-click anywhere in the right-hand pane, click ***"New"*** > ***"DWORD (32-bit) Value"*** and name it ***"DisableSearchBoxSuggestions"***
+6. Ensure the value of ***"DisableSearchBoxSuggestions"*** is set to ***"1"***
+7. Close the "Registry Editor" window
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.7.1	Post-installation: Update Search Permissions settings
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [Privacy and Security] in the left-hand panel.
-3.	Click on [Search permissions] (8th from top) in the right hand pane.
-4.	Set "Microsoft account" to [Off].
-5.	Set "Work or School account" to [Off].
-6.	Click the [Clear device search history] button.
-7.	Ensure "Show search highlights" is set to [Off].
+---
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.8.1	Post-installation: Remove Widgets from Taskbar
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Open the [Settings] app.
-2.	Click on [Personalization] in the left-hand panel.
-3.	Set "Widgets" to [Off] in the right-hand panel.
+## 3.7 Post-installation: Update Search Permissions settings
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 3.9.1	Post-installation: Restart to apply Group Policy setting changes
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Restart the computer.
+1. Open the ***"Settings"*** app.
+2. Click on ***"Privacy and Security"*** in the left-hand panel.
+3. Click on ***"Search permissions"*** _(8th from top)_ in the right hand pane.
+4. Set ***"Microsoft account"*** to ***"Off"***.
+5. Set ***"Work or School account"*** to ***"Off"***.
+6. Click the ***"Clear device search history"*** button.
+7. Ensure ***"Show search highlights"*** is set to ***"Off"***.
 
-Group Policy settings are applied when you log on.  Restarting will ensure all the Group Policy settings are applied.
+---
 
+## 3.8 Post-installation: Remove Widgets from Taskbar
 
+1. Open the ***"Settings"*** app.
+2. Click on ***"Personalization"*** in the left-hand panel.
+3. Set ***"Widgets"*** to ***"Off"*** in the right-hand panel.
 
+---
 
+## 3.9 Post-installation: Restart to apply Group Policy setting changes
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.1.1	Post-installation: Set Terminal as default terminal application
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+1. Restart the computer.
+
+   Group Policy settings are applied when you log on.  Restarting will ensure all the Group Policy settings are applied.  
+
+---
+
+## 4.1.1 Post-installation: Set Terminal as default terminal application
+
 The old "Command Line" application is now deprecated and will be removed in future versions of Windows.  Terminal is intended to entirely replace it.
 Terminal is actually a really great, modern terminal application, including excellent integeration with WSL2, and great customization features.
 
-1.	In the search box, type "Terminal", then click the, [Run as administrator] on the right-hand side for the "Terminal App".
-2.	At the top of terminal, click [Open Settings].
-3.	Next to "Default terminal application" change the entry to [Windows Terminal].
-4.	Click the [Save] button.
-5.	Close the "Settings" application tab.  Do not close the entire window.
+1. In the search box, type ***"Terminal"***, then click the, ***"Run as administrator"*** on the right-hand side for the ***"Terminal App"***.
+2. At the top of terminal, click ***"Open Settings"***.
+3. Next to ***"Default terminal application"*** change the entry to ***"Windows Terminal"***.
+4. Click the ***"Save"*** button.
+5. Close the ***"Settings"*** application tab.  Do not close the entire window.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.1.1	Post-installation: Remove Cortana
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-The terminal app should still be open if you only closed the "Settings" tab, and not the entire window.  If not...
-
-1.	In the search box, type "Terminal", then click the, [Run as administrator] on the right-hand side for the "Terminal App".
-2.	Type or copy-paste the following command:			Get-AppxPackage -AllUsers *Microsoft.549981C3F5F10* | Remove-AppxPackage
-
-	If you wish to reinstall Cortana, you can reinstall it from the "Microsoft Store" application.
-
-
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.1.2	Post-installation: Remove Other Applications, Part 1
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-The following applications are of marginal value to most people, so I will suggest removing them if you don't want them.
-Certainly if you use any of them, you should keep them.  These are also probably some of the best ways to use these services on Windows.
-If you want to add any of them back, you can do so from the "Microsoft Store" application.
-
--- -----
+## 4.1.2 Post-installation: Remove Cortana
 
 The terminal app should still be open if you only closed the "Settings" tab, and not the entire window.  If not...
 
-1.	In the search box, type "Terminal", then click the, [Run as administrator] on the right-hand side for the "Terminal App".
+1. In the search box, type "Terminal", then click the, [Run as administrator] on the right-hand side for the "Terminal App".
+2. Type or copy-paste the following command:
 
-2.	If you want to save a full list of all Apps installed for all users, run this command, replacing <USERNAME> with your account's username.
-	Typing or copy-pasting the following command will put a text file on your desktop named [Apps.txt] containing the output of the command.
+```Get-AppxPackage -AllUsers *Microsoft.549981C3F5F10* | Remove-AppxPackage```
 
-	Get-AppxPackage -AllUsers > C:\Users\<USERNAME>\Desktop\Apps.txt
+   If you wish to reinstall Cortana, you can reinstall it from the "Microsoft Store" application.  
 
-	You may wish to inspect this file yourself to ensure there's not anything new (not in the below list) that you want to remove.
-	Be careful about removing something made by Microsoft -- a lot of the stuff at the top may result in things breaking if you remove them.
-	The list below is 100% safe and nothing you're liable to ever miss.
+## 4.1.3 Post-installation: Remove Other Applications, Part 1
 
-3.	To remove any of the applications below, type or copy-paste the corresponding command into [Terminal], then press the [Enter] key on your keyboard.
+The following applications are of marginal value to most people, so I will suggest removing them if you don't want them.  
+Certainly if you use any of them, you should keep them.  These are also probably some of the best ways to use these services on Windows.  
+If you want to add any of them back, you can do so from the ***"Microsoft Store"*** application.  
 
-	Bing News:
-		Get-AppxPackage -AllUsers *Microsoft.BingNews* | Remove-AppxPackage
+The Terminal app should still be open if you only closed the "Settings" tab, and not the entire window.  If not...
+
+1. In the search box, type ***"Terminal"***, then click the, ***"Run as administrator"*** on the right-hand side for the ***"Terminal App"***.
+
+2. If you want to save a full list of all Apps installed for all users, run this command, replacing **<USERNAME>** with your account's username.
+
+   Typing or copy-pasting the following command will put a text file on your desktop named ***"Apps.txt"*** containing the output of the command.  
+
+```Get-AppxPackage -AllUsers > C:\Users\<USERNAME>\Desktop\Apps.txt```
+
+   You may wish to inspect this file yourself to ensure there's not anything new (not in the below list) that you want to remove.  
+   Be careful about removing something made by Microsoft -- a lot of the stuff at the top may result in things breaking if you remove them.  
+   The list below is 100% safe and nothing you're liable to ever miss.  
+
+3. To remove any of the applications below, type or copy-paste the corresponding command into ***"Terminal"***, then press the ***"Enter"*** key on your keyboard.
+
+
+   ***Bing News:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.BingNews* | Remove-AppxPackage```
 	
-	Clipchamp - Video Editor:
-		Get-AppxPackage -AllUsers *Clipchamp.Clipchamp* | Remove-AppxPackage
+   ***Clipchamp - Video Editor:***  
+   
+```Get-AppxPackage -AllUsers *Clipchamp.Clipchamp* | Remove-AppxPackage```
 
-		Better free video editors exist, such as HitFilm Express.  You won't miss this one.
+   Better free video editors exist, such as HitFilm Express.  You won't miss this one.  
 
-	Office:
-		Get-AppxPackage -AllUsers *Microsoft.MicrosoftOfficeHub* | Remove-AppxPackage
+   ***Office:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.MicrosoftOfficeHub* | Remove-AppxPackage```
 
-		If you actually are installing Office, removing this won't hurt you.  You're much better off using the appropriate Office installer you plan to use.
+   If you actually are installing Office, removing this won't hurt you.  You're much better off using the appropriate Office installer you plan to use.  
 
-	Outlook:
-		Get-AppxPackage -AllUsers *Microsoft.OutlookForWindows* | Remove-AppxPackage
+   ***Outlook:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.OutlookForWindows* | Remove-AppxPackage```
 
-		Outlook syncs your sensitive credentials without your permission.  Yikes!  Strongly recommend not using Outlook in its current form.
+   Outlook syncs your sensitive credentials without your permission.  Yikes!  Strongly recommend not using Outlook in its current form.  
 
-	People (Address Book/Contact List):
-		Get-AppxPackage -AllUsers *Microsoft.People* | Remove-AppxPackage
+   ***People _(Address Book/Contact List)_:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.People* | Remove-AppxPackage```
 
-	Solitaire (only if you don't want Solitaire):
-		Get-AppxPackage -AllUsers *Microsoft.MicrosoftSolitaireCollection* | Remove-AppxPackage
+   ***Solitaire _(only if you don't want Solitaire)_:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.MicrosoftSolitaireCollection* | Remove-AppxPackage```
 
-	Teams:
-		Get-AppxPackage -AllUsers *Microsoft.Teams* | Remove-AppxPackage
+   ***Teams:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.Teams* | Remove-AppxPackage```
 
-	Windows Feedback Hub:
-		Get-AppxPackage -AllUsers *Microsoft.WindowsFeedbackHub* | Remove-AppxPackage
+   ***Windows Feedback Hub:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.WindowsFeedbackHub* | Remove-AppxPackage```
 
-	Windows Maps:
-		Get-AppxPackage -AllUsers *Microsoft.WindowsMaps* | Remove-AppxPackage
+   ***Windows Maps:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.WindowsMaps* | Remove-AppxPackage```
 
-	Zune Music:
-		Get-AppxPackage -AllUsers *Microsoft.ZuneMusic* | Remove-AppxPackage
+   ***Zune Music:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.ZuneMusic* | Remove-AppxPackage```
 
-	Zune Video:
-		Get-AppxPackage -AllUsers *Microsoft.ZuneVideo* | Remove-AppxPackage
+   ***Zune Video:***  
+   
+```Get-AppxPackage -AllUsers *Microsoft.ZuneVideo* | Remove-AppxPackage```
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.1.3	Post-installation: Remove Other Applications, Part 2
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-These applications will only be removed for the current user.  You will need to repeat these for other users.
+## 4.1.4 Post-installation: Remove Other Applications, Part 2
 
-All of these applications can be reinstalled from the [Microsoft Store] application if desired.
+These applications will only be removed for the current user.  You will need to repeat these for other users.  
 
-1.	In the search box, type "Add or remove", then click the, [Add or remove programs] match.
-2.	To remove an application, click the [...] button to the right-hand side of an application, then click [Uninstall].
+All of these applications can be reinstalled from the ***"Microsoft Store"*** application if desired.  
 
-The following apps are ones you may wish to remove, depending on your needs...
-
-	Clock					(this is not the Windows clock, it is a separate desktop clock application)
-	Mail and Calendar			(if you have other applications you'd use for this functionality)
-	Microsoft OneDrive			(if you never plan to use OneDrive)
-	Microsoft Teams				(should already be gone
-	Microsoft ToDo			(if you have other apps you use for ToDo lists and reminders)
-	Quick Assist				(if you will never allow others remote access to your computer for IT help desk purposes)
-	Sticky Notes				(virtual sticky notes.  some may want to keep this app around)
-	Tips
-	Voice Recorder				(if you don't want a Voice Recorder app)
-	Weather					(if you don't want Weather widgets)
-	Xbox Live				(if you do not intend to use Microsoft Game Pass functionality.  Always leave the other Xbox applications installed!)
-
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.1.4	Post-installation: Remove Other Applications, Part 3
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-These applications will only be removed for the current user.  You will need to repeat these for other users.
-
-All of these applications can be reinstalled from the [Microsoft Store] application if desired.
-
-1.	Open the [Start] menu.
-2.	Right-click the Pinned application from the list below, then click the [Uninstall] menu option.
+1.	In the search box, type ***"Add or remove"***, then click the, ***"Add or remove programs"*** match.
+2.	To remove an application, click the ***"..."*** button to the right-hand side of an application, then click ***"Uninstall"***.
 
 The following apps are ones you may wish to remove, depending on your needs...
 
-	Camo Studio
-	ESPN
-	Grammarly
-	Instagram
-	Kindle
-	LinkedIn
-	Luminar Neo - AI Photo Editor
-	Messenger
-	Netflix
-	Outlook
-	Prime Video
-	Spotify
-	TikTok
-	WhatsApp
+  * Clock
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.2.1	Post-installation: Windows Deployment Image System Manager Cleanup
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, type "Terminal", then click the, [Run as administrator] on the right-hand side for the "Terminal App".
-2.	Type or copy-paste the following command:		dism /online /cleanup-image /startcomponentcleanup
+   _(this is not the Windows clock, it is a separate desktop clock application)_
 
-	This will clean up old versions of Windows components.  You have a fresh install, so this is just free real estate.
-	This may take several minutes (up to 10) to complete.
+  * Mail and Calendar
 
-3.	Type or copy-paste the following command:		dism /online /cleanup-image /analyzecomponentstore
+   _(if you have other applications you'd use for this functionality)_  
+   
+  * Microsoft OneDrive
 
-	This will inform you of how much space is still taken up by your local deployment image.
-	At this point it may be about 8GB, whereas in your initial installation it was closer to 20GB.
+   _(if you never plan to use OneDrive)_  
+   
+  * Microsoft Teams
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.3.1	Post-installation: Update the Microsoft App Installer
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1. 	In the search box, type "Store", then click the [Microsoft Store] match.
-2.	In the vertical menu along the left-hand side of the Microsoft Store window, click the [Library] button 2nd from the bottom (above [Help])
-3.	Scroll through the list on the right-hand side, then click on the [Update] button next to [App installer]
-4.	After the App Installer app has updated successfully, close the Microsoft Store window.
+    _(should already be gone)_
+    
+  * Microsoft ToDo
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.4.1	Post-installation: Update the Windows App Installer from the Microsoft Store
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+   _(if you have other apps you use for ToDo lists and reminders)_  
+   
+  * Quick Assist
+    
+   _(if you will never allow others remote access to your computer for IT help desk purposes)_  
+   
+  * Sticky Notes
+
+   _(virtual sticky notes.  some may want to keep this app around)_  
+   
+  * Tips
+  * Voice Recorder
+
+   _(if you don't want a Voice Recorder app)_  
+   
+  * Weather
+
+   _(if you don't want Weather widgets)_  
+   
+  * Xbox Live
+
+   _(if you do not intend to use Microsoft Game Pass functionality.  Always leave the other Xbox applications installed!)_  
+
+## 4.1.5 Post-installation: Remove Other Applications, Part 3
+
+These applications will only be removed for the current user.  You will need to repeat these for other users.
+
+All of these applications can be reinstalled from the ***"Microsoft Store"*** application if desired.
+
+1. Open the ***"Start"*** menu.
+2. Right-click the Pinned application from the list below, then click the ***"Uninstall"*** menu option.
+
+The following apps are ones you may wish to remove, depending on your needs...
+
+  * Camo Studio  
+  * ESPN  
+  * Grammarly  
+  * Instagram  
+  * Kindle  
+  * LinkedIn  
+  * Luminar Neo - AI Photo Editor  
+  * Messenger  
+  * Netflix  
+  * Outlook  
+  * Prime Video  
+  * Spotify  
+  * TikTok  
+  * WhatsApp  
+
+---
+
+## 4.2.1 Post-installation: Windows Deployment Image System Manager Cleanup
+
+1. In the search box, type ***"Terminal"***, then click the, ***"Run as administrator"*** on the right-hand side for the ***"Terminal App"***.
+2. Type or copy-paste the following command:
+
+```dism /online /cleanup-image /startcomponentcleanup```
+
+   This will clean up old versions of Windows components.  You have a fresh install, so this is just free real estate.  
+   This may take several minutes (up to 10) to complete.  
+
+3. Type or copy-paste the following command:
+
+```dism /online /cleanup-image /analyzecomponentstore```
+
+   This will inform you of how much space is still taken up by your local deployment image.  
+   At this point it may be about 8GB, whereas in your initial installation it was closer to 20GB.
+
+---
+
+## 4.3.1 Post-installation: Update the Microsoft App Installer
+
+1. In the search box, type ***"Store"***, then click the ***"Microsoft Store"*** match.
+2. In the vertical menu along the left-hand side of the "Microsoft Store" window, click the ***"Library"*** button 2nd from the bottom _(above ***"Help"***)_
+3. Scroll through the list on the right-hand side, then click on the ***"Update"*** button next to ***"App installer"***
+4. After the App Installer app has updated successfully, close the "Microsoft Store" window.
+
+---
+
+## 4.4.1 Post-installation: Update the Windows App Installer from the Microsoft Store
+
 PowerShell will get forcibly updated eventually, but you might as well take advantage of the newer version now.
 
-1.	In the search box, type "Terminal", then click the [Terminal] match.
+1. In the search box, type ***"Terminal"***, then click the ***"Terminal"*** match.
 
-2.	Type or copy-paste the following command:		winget install Microsoft.PowerShell
-3.	Enter 'Y', then press the ENTER key to agree to the source agreement for the Winget source.
+2. Type or copy-paste the following command:
 
-Proceed with the installer.
+```winget install Microsoft.PowerShell```
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.5.1	Post-installation: Install Alternative Web Browsers
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+3. Enter ***"Y"***, then press the ***ENTER*** key to agree to the source agreement for the Winget source.
+
+Proceed with the installer.  
+
+---
+
+## 4.5.1 Post-installation: Install Alternative Web Browsers
+
 It is likely you don't prefer Microsoft Edge.  Here's how to install browsers without ever having to even open Edge to install them.
 
-1.	In the search box, type "Terminal", then click the [Terminal] match.
+1. In the search box, type ***"Terminal"***, then click the ***"Terminal"*** match.
 
-2.	Type or copy-paste any of the following commands to install the browser(s) of your choosing:
+2. Type or copy-paste any of the following commands to install the browser(s) of your choosing:
 
-	winget install Mozilla.Firefox
-	winget install Google.Chrome
+```winget install Mozilla.Firefox```  
+```winget install Google.Chrome```
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.6.1	Post-installation: Change default web browser
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, type "default", then click the, [Default apps, System Settings] match.
-2.	From the list, click either "Firefox" or "Google Chrome".
-3.	Click the [Set default] button at the top.
-4.	Scroll down to the ".pdf" entry, then click it.
-5.	Choose either "Firefox" or "Google Chrome" as appropriate.  Then click the [Set default] button.
+---
 
-Repeat the previous two steps for the following entries:
+## 4.6.1 Post-installation: Change default web browser
 
-	.htm
-	.html
-	.pdf
-	.shtml
-	.svg
-	.webp
-	.xht
-	.xhtml
-	HTTP
-	HTTPS
+1. In the search box, type ***"default"***, then click the, ***"Default apps, System Settings"*** match.
+2. From the list, click either ***"Firefox"*** or ***"Google Chrome"***.
+3. Click the ***"Set default"*** button at the top.
+4. Scroll down to the ***".pdf"*** entry, then click it.
+5. Choose either ***"Firefox"*** or ***"Google Chrome"*** as appropriate.  Then click the ***"Set default"*** button.
 
-6.	Close the Settings window.
+Repeat the previous two steps for the following entries:  
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 4.7.1	Post-installation: Re-size Paging File
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+  * .htm
+  * .html
+  * .pdf
+  * .shtml
+  * .svg
+  * .webp
+  * .xht
+  * .xhtml
+  * HTTP
+  * HTTPS
+
+6. Close the "Settings" window.
+
+---
+
+## 4.7.1 Post-installation: Re-size Paging File
+
 All operating systems will page things to disk eventually.  Eliminating a paging file entirely will eventually result in weird behavior and stability issues.
 
-However, if you have plenty of memory, reducing the size of your paging file will free up some space.
-Moreover, ensuring your paging file is a fixed size will help to minimize fragmentation of memory paged to disk, improving performance.
+However, if you have plenty of memory, reducing the size of your paging file will free up some space.  
+Moreover, ensuring your paging file is a fixed size will help to minimize fragmentation of memory paged to disk, improving performance.  
 
-1.	Open the "File Explorer".
-2.	Right-click [This PC] in the left-hand pane, then click "Properties"
-3.	Click the blue link, [Advanced system settings], which is the right-most link after, "Related Links".
-4.	Click the [Settings] button in the "Performance" group.
-5.	Click the [Advanced] tab.
-6.	Click the [Change...] button in the "Virtual memory" group.
-7.	Uncheck [Automatically manage paging file size for all drives.
-9.	Select the radio button, [Custom size].
-10.	Enter a value (in MiB) for [Initial size (MB)] and [Maximum size (MB)].  These values should be identical.
+1. Open the ***"File Explorer***".
+2. Right-click ***"This PC"*** in the left-hand pane, then click "Properties"***
+3. Click the blue link, ***"Advanced system settings], which is the right-most link after, "Related Links"***.
+4. Click the ***"Settings"*** button in the _"Performance"_ group.
+5. Click the ***"Advanced"*** tab.
+6. Click the ***"Change..."*** button in the _"Virtual memory"_ group.
+7. Uncheck ***"Automatically manage paging file size for all drives"***.
+8. Select the radio button, ***"Custom size"***.
+9. Enter a value _(in MiB)_ for ***"Initial size (MB)"*** and ***"Maximum size (MB)"***.  These values should be identical.
 
-	In general, this shouldn't be less than 4096MB for a modern system.
-	If you want the ability to record an Complete system memory dump in a crash, this should be a minimum of: (GB of installed memory * 1024) + 4096
+   In general, this shouldn't be less than 4096MB for a modern system.  
+   If you want the ability to record a memory dump in a crash, this should be a minimum of: _(GB of installed memory * 1024) + 4096_  
 
-11.	Click the [Set] button.
-12.	Click the [OK] button.
-13.	You will be notified that you need to restart Windows for the change to take effect.  Click the [OK] button.
-14.	Close all of the remaining Windows.  
-15.	Click the [Restart Now] button.
+10. Click the ***"Set"*** button.
+11. Click the ***"OK"*** button.
+12. You will be notified that you need to restart Windows for the change to take effect.  Click the ***"OK"*** button.
+13. Close all of the remaining Windows.  
+14. Click the ***"Restart Now"*** button.
 
+---
 
+## 5.1.1 Windows 11 Hardening: Enable MAPS
 
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
+3. In the Local Group Policy Editor window, move to the following path in the left sidebar:
 
+   [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Microsoft Defender Antivirus] > [MAPS]  
+   
+4. In the right hand pane, double-click ***"Join Microsoft MAPS"***.
+5. On the "Join Microsoft MAPS" dialog, select ***"Enabled"***, then set ***"Join Microsoft MAPS***" to ***"Advanced Maps"***.
+6. Click the ***"OK"*** button to close the "Join Microsoft MAPS" dialog.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.1.1	Windows 11 Hardening: Enable MAPS
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	Press the "Windows Key + R" keyboard shortcut.
-2.	In the "Run" dialog enter, "gpedit.msc" then click the [OK] button.
-3.	In the Local Group Policy Editor window, move to the following path in the left sidebar: [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Microsoft Defender Antivirus] > [MAPS]
-4.	In the right hand pane, double-click [Join Microsoft MAPS].
-5.	On the "Join Microsoft MAPS" dialog, select [Enabled], then set "Join Microsoft MAPS" to [Advanced Maps].
-6.	Click the [OK] button to close the "Join Microsoft MAPS" dialog.
+## 5.1.2 Windows 11 Hardening: Enable Block at First Sight
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.1.2	Windows 11 Hardening: Enable Block at First Sight
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-7.	In the right hand pane, double-click [Configure the 'Block at First Sight' feature].
-8.	On the "Configure the 'Block at First Sight' feature" dialog, select [Enabled].
-9.	Click the [OK] button to close the "Configure the 'Block at First Sight' feature" dialog.
+1. In the right hand pane, double-click ***"Configure the 'Block at First Sight' feature"***.
+2. On the "Configure the 'Block at First Sight' feature" dialog, select ***"Enabled"***.
+3. Click the ***"OK"*** button to close the "Configure the 'Block at First Sight' feature" dialog.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.1.3	Windows 11 Hardening: Configure MAPS reporting
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-10.	In the right hand pane, double-click [Configure local setting override for reporting to Microsoft MAPS].
-11.	On the "Configure local setting override for reporting to Microsoft MAPS" dialog, select [Enabled].
-12.	Click the [OK] button to close the "Configure local setting override for reporting to Microsoft MAPS" dialog.
+## 5.1.3 Windows 11 Hardening: Configure MAPS reporting
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.1.4	Windows 11 Hardening: Configure MAPS Sample File policy
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-13.	In the right hand pane, double-click [Send file samples when further analysis is required].
-14.	On the "Send file samples when further analysis is required" dialog, select [Enabled], then set "Send file samples when further analysis is required" to [Send safe samples].
-15.	Click the [OK] button to close the "Send file samples when further analysis is required" dialog.
+1. In the right hand pane, double-click ***"Configure local setting override for reporting to Microsoft MAPS"***.
+2. On the "Configure local setting override for reporting to Microsoft MAPS" dialog, select ***"Enabled"***.
+3. Click the ***"OK"*** button to close the "Configure local setting override for reporting to Microsoft MAPS" dialog.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.2.1	Windows 11 Hardening: Enable Windows Defender Cloud Protection
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-16.	In the Local Group Policy Editor window, move to the following path in the left sidebar: [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Microsoft Defender Antivirus] > [MpEngine]
-17.	In the right hand pane, double-click [Select cloud protection level].
-18.	On the "Select cloud protection level" dialog, select [Enabled], then set "Select cloud blocking level" to [High blocking level].
-19.	Click the [OK] button to close the "Select cloud protection level" dialog.
+## 5.1.4 Windows 11 Hardening: Configure MAPS Sample File policy
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.2.2	Windows 11 Hardening: Set Cloud Protection Check Time Limit
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-20.	In the right hand pane, double-click [Configure extended cloud check].
-21.	On the "Configure extended cloud check" dialog, select [Enabled], then set "Specify the extended cloud check time in seconds" to [50].
-22.	Click the [OK] button to close the "Configure extended cloud check" dialog.
+1. In the right hand pane, double-click ***"Send file samples when further analysis is required"***.
+2. On the "Send file samples when further analysis is required" dialog, select ***"Enabled"***, then set ***"Send file samples when further analysis is required"*** to ***"Send safe samples"***.
+3. Click the ***"OK"*** button to close the "Send file samples when further analysis is required" dialog.
 
-23.	Close the "Local Group Policy Editor" window.
+---
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.3.1	Restart Computer
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	You must restart Windows for the above changes to take effect.
-	This is required to complete the rest of the security hardening configuration.
+## 5.2.1 Windows 11 Hardening: Enable Windows Defender Cloud Protection
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.4.1	Windows 11 Hardening: Set a More Aggressive Windows Defender Signature Update Interval
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	In the search box, type "Terminal", then click the, [Run as administrator] on the right-hand side for the "Terminal App".
-2.	Type or copy-paste the following command:		Set-MpPreference -SignatureUpdateInterval 1
+1. In the Local Group Policy Editor window, move to the following path in the left sidebar:
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.4.2	Windows 11 Hardening: Configure Windows Defender to update signatures before a scan starts
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-3.	Type or copy-paste the following command:		Set-MpPreference -CheckForSignaturesBeforeRunningScan 1
+   [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Microsoft Defender Antivirus] > [MpEngine]
 
-4.	Close the Terminal application window.
+2. In the right hand pane, double-click ***"Select cloud protection level"***.
+3. On the ***"Select cloud protection level"*** dialog, select ***"Enabled"***, then set ***"Select cloud blocking level"*** to ***"High blocking level"***.
+4. Click the ***"OK"*** button to close the "Select cloud protection level" dialog.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.5.1 	Windows 11 Hardening: Improve Exploit Protection Defaults
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+## 5.2.2 Windows 11 Hardening: Set Cloud Protection Check Time Limit
 
-1.	In the search box, type "Windows Security", then click the, [Windows Security, System Settings] match.
-2.	Click the [App & browser control] entry in the left-hand pane.
-3.	Click the blue link, "Exploit protection settings" in the right-hand pane under "Exploit Protection".
-4.	Under [System Settings] (default tab), ensure [Use default (On)] is set for all entries.
+1. In the right hand pane, double-click ***"Configure extended cloud check"***.
+2. On the "Configure extended cloud check" dialog, select ***"Enabled"***, then set ***"Specify the extended cloud check time in seconds"*** to ***"50"***.
+3. Click the ***"OK"*** button to close the "Configure extended cloud check" dialog.
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.5.2 	Windows 11 Hardening: Install Microsoft Defender Application Guard for Microsoft Edge
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-This significantly hardens Microsoft Edge, turning off many of its features in the sake of security.
-These features can always be turned back on -- if you want them back on -- for Microsoft Edge.
-Consider this section completely optional.  Yet if you'd like Edge to exist purely as a hyper-secure browser, consider it.
+4. Close the "Local Group Policy Editor" window.
 
-1.	Click "App & browser control" from the left-hand pane of the "Windows Security" window.
-2.	Click the [Install Microsoft Defender Application Guard] blue link in the right-hand pane under, "Isolated browsing."
-3.	In the "Windows Features" dialog, check [Microsoft Defender Application Guard], click the [Yes] button when prompted to confirm the change, then click the [OK] button.
+---
 
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
--- 5.5.3	Restart Computer
--- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-1.	You must restart Windows for the above changes to take effect.
-	This is required to complete the rest of the security hardening configuration.
+## 5.3.1 Restart Computer
+
+1. You must restart Windows for the above changes to take effect.
+
+   This is required to complete the rest of the security hardening configuration.  
+
+## 5.4.1 Windows 11 Hardening: Set a More Aggressive Windows Defender Signature Update Interval
+
+1. In the search box, type ***"Terminal"***, then click the, ***"Run as administrator"*** on the right-hand side for the ***"Terminal App"***.
+2. Type or copy-paste the following command:
+
+```Set-MpPreference -SignatureUpdateInterval 1```  
+
+## 5.4.2 Windows 11 Hardening: Configure Windows Defender to update signatures before a scan starts
+
+1. Type or copy-paste the following command:
+
+```Set-MpPreference -CheckForSignaturesBeforeRunningScan 1```
+
+2. Close the Terminal application window.
+
+## 5.5.1 Windows 11 Hardening: Improve Exploit Protection Defaults
+
+1. In the search box, type ***"Windows Security", then click the, ***"Windows Security, System Settings"*** match.
+2. Click the ***"App & browser control"*** entry in the left-hand pane.
+3. Click the blue link, ***"Exploit protection settings"*** in the right-hand pane under "Exploit Protection".
+4. Under ***"System Settings"*** _(default tab)_, ensure ***"Use default (On)"*** is set for all entries.
+
+## 5.5.2 Windows 11 Hardening: Install Microsoft Defender Application Guard for Microsoft Edge
+
+This significantly hardens Microsoft Edge, turning off many of its features in the sake of security.  
+These features can always be turned back on -- if you want them back on -- for Microsoft Edge.  
+Consider this section completely optional.  Yet if you'd like Edge to exist purely as a hyper-secure browser, consider it.  
+
+1. Click ***"App & browser control"*** from the left-hand pane of the "Windows Security" window.
+2. Click the ***"Install Microsoft Defender Application Guard"*** blue link in the right-hand pane under, ***"Isolated browsing."***
+3. In the "Windows Features" dialog, check ***"Microsoft Defender Application Guard"***, click the ***"Yes"*** button when prompted to confirm the change, then click the ***"OK***" button.
+
+## 5.5.3 Restart Computer
+
+1. You must restart Windows for the above changes to take effect.
+   
+   This is required to complete the rest of the security hardening configuration.
+
+---
+
+## 6.1 Guide Complete
+
+This concludes the current version of the ***Win11Clean*** guide.  The next planned release is in June 2024.
+
+If you found this guide useful, please share the following link with friends and colleagues: [https://github.com/GoofGarage/Win11Clean](https://github.com/GoofGarage/Win11Clean)

@@ -11,12 +11,13 @@ This project is provided under the Creative Commons Attribution-ShareAlike 4.0 I
 
 - - - - -
 
-This guide was last updated on ***2024-02-19***, for Windows 11 23H2 v2.  The next update is planned for **2024-06-16**.
+This guide was last updated on ***2024-02-27***, for Windows 11 23H2 v2.  The next update is planned for **2024-06-16**.
 
 The guide currently contains the following sections:
 
 1. Initial Setup (from ISO or Flash Drive)
 2. Out-of-Box Experience (OOBE) Setup
-3. Post-Install Configuration - **This is the bulk of the guide!**
+3. Post-Install Configuration - **This is the bulk of the guide!**  
+4. *Update from Previous Versions* - Use only if upgrading from a previous version of the guide
 
 If you already have an existing Windows 11 installation, go straight to **3. Post-Install Configuration**.  Some privacy and telemetry settings are not covered in this section, as it is assumed that these would've already been handled by the first two sections.  The guide may be updated at some point in time to provide guidance for users to change those settings on an existing Windows 11 installation.  For the time being, that will be an exercise left to the reader.

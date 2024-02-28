@@ -153,7 +153,6 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 3. Click on ***"Notifications"*** _(3rd from top)_ in the right-hand pane.
 4. Click on the ***"Additional settings"*** button _(at the bottom)_ to expand it.
 5. Uncheck, ***"Show the Windows welcome experience..."***.
-6. Uncheck, ***"Suggest ways to get the most out of Windows..."***.
 7. Uncheck, ***"Get tips and suggestions when I use Windows"***.
 
 ---

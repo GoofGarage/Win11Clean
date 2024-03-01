@@ -5,6 +5,21 @@ Use this section only if you're updating from a previous release of the Win11Cle
 
 ---
 
+# 0.4.3 from 0.4.2
+
+## 1 Post-installation: Disable Suggestion Notifications in the Registry
+
+This is required to completely disable Suggestion Toasts for things like Windows Co-Pilot Preview.  This must be repeated per user.
+
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the ***"OK"*** button.
+3. Go to the following path: ***[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested]*** .
+4. Double-click ***"Enabled"*** in the right pane
+5. Ensure the value is set to ***"0"***.
+6. Close the Registry Editor window.
+
+---
+
 # 0.4.2 from 0.3.0
 
 ## 1. Post-installation: Disable ads shown as Notifications

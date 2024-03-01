@@ -155,6 +155,17 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 5. Uncheck, ***"Show the Windows welcome experience..."***.
 7. Uncheck, ***"Get tips and suggestions when I use Windows"***.
 
+## 3.2.4 Post-installation: Disable Suggestion Notifications in the Registry
+
+This is required to completely disable Suggestion Toasts for things like Windows Co-Pilot Preview.  Unfortunately this must be repeated per user.
+
+1. Press the ***"Windows Key + R"*** keyboard shortcut.
+2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the ***"OK"*** button.
+3. Go to the following path: ***[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested]*** .
+4. Double-click ***"Enabled"*** in the right pane
+5. Ensure the value is set to ***"0"***.
+6. Close the Registry Editor window.
+
 ---
 
 ## 3.3 Post-installation: Disable feedback requests 

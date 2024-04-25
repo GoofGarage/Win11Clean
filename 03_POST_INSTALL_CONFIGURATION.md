@@ -115,7 +115,8 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 
 1. In the search box, type ***"Start Settings"***, then click the, ***"Start Settings, System settings"*** match
 2. Under ***"Layout"*** change from ***"Default"*** to ***"More pins"***.
-3. You may wish to set ***"Show recently added apps"***, ***"Show recommendations for tips, shortcuts..."*** and ***"Show recently opened items..."*** to ***"Off"***.
+3. Set, ***"Show recommendations for tips, shortcuts..."***. to ***"Off"***.  This will ensure that ads will not appear in the Start Menu, as ads in the Start Menu are considered recommendations.
+4. You may also wish to set ***"Show recently added apps"***, and ***"Show recently opened items..."*** to ***"Off"***.
 
 ---
 

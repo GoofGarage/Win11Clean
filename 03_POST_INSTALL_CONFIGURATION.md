@@ -744,6 +744,6 @@ Consider this section completely optional.  Yet if you'd like Edge to exist pure
 
 ## 6.1 Guide Complete
 
-This concludes the current version of the ***Win11Clean*** guide.  The next planned release is in June 2024.
+This concludes the current version of the ***Win11Clean*** guide.  The next planned release is in August 2024.
 
 If you found this guide useful, please share the following link with friends and colleagues: [https://github.com/GoofGarage/Win11Clean](https://github.com/GoofGarage/Win11Clean)

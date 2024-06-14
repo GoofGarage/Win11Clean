@@ -11,7 +11,7 @@ This project is provided under the Creative Commons Attribution-ShareAlike 4.0 I
 
 - - - - -
 
-This guide was last updated on ***2024-06-16***, for Windows 11 23H2 v2.  The next update is planned for **2024-08-18**.
+This guide was last updated on ***2024-06-23***, for Windows 11 24H2 v2.  The next update is planned for **2024-08-18**.
 
 The guide currently contains the following sections:
 

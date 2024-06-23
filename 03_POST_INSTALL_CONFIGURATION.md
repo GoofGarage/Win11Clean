@@ -23,7 +23,7 @@ The post-installation guide covers the following topics:
   * Improving security by having Windows Defender update more frequently, and using MAPS  
 
 This will make Windows 11 more familiar, as well as eliminate data collection and a fair number of background tasks.
-It will also reduce the initial commit charge of logging into the Explorer window manager to under 2GB of memory, which is roughly inline with Windows 10.
+It will also reduce the initial commit charge of logging into the Explorer window manager to ~1.7GB of memory, which is roughly inline with Windows 10.
 
 ---
 
@@ -34,7 +34,7 @@ It will also reduce the initial commit charge of logging into the Explorer windo
 
    It is likely that at least 5 updates will be found.  
    They will all start to install automatically.  This is intended.  
-   The, ***"2024-02 Cumulative Update for Windows 11 Version 23H2 for x64-based Systems"*** will take the longest.  Possibly up to 15 minutes.  
+   The, ***"2024-06 Cumulative Update for Windows 11 Version 23H2 for x64-based Systems"*** will take the longest.  Possibly up to 15 minutes.  
 
 3.  When all updates are Completed or Pending Restart, click the ***"Restart now"*** button.  
 
@@ -744,6 +744,6 @@ Consider this section completely optional.  Yet if you'd like Edge to exist pure
 
 ## 6.1 Guide Complete
 
-This concludes the current version of the ***Win11Clean*** guide.  The next planned release is in June 2024.
+This concludes the current version of the ***Win11Clean*** guide.  The next planned release is in August 2024.
 
 If you found this guide useful, please share the following link with friends and colleagues: [https://github.com/GoofGarage/Win11Clean](https://github.com/GoofGarage/Win11Clean)

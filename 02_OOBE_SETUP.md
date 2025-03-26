@@ -1,4 +1,4 @@
-# Windows 11 23H2v2 Out-of-Box Experience (OOBE) Setup
+# Windows 11 24H2 Out-of-Box Experience (OOBE) Setup
 
 ---
 
@@ -17,16 +17,32 @@
 
 ---
 
-## 1.3 Out of Box Experience, Hostname
+## 1.3 Let's connect you to a network
 
-1. When prompted ***"Let's name your device"*** enter a hostname in the [Name your device] text box.
+1. When prompted, you will need to connect to a network.
+
+   If your wireless adapter was detected, connect to an existing WiFi network.
+   If you have an ethernet port, plug an ethernet cable connected to your etnwork into an available RJ-45 port on the computer.
+   If you only use wireless nad your wireless adapter was not detected, plug in an USB/Flash drive containing the drivers for your wireless adapter, and click "Install driver."
+
+2. Click the ***"Next"*** button.
+
+   At this point, setup will indicate, "Just a moment, checking for updates."
+
+3. After installing updates, the Windows OOBE Setup will restart.  After restarting, Setup will continue. 
+
+## 1.4 Out of Box Experience, Hostname
+
+1. When prompted, you will need to connect to a network.  You completed this in the previous section.
+2. Click the ***"Next"*** button.
+3. When prompted ***"Let's name your device"*** enter a hostname in the [Name your device] text box.
 
    This will be the _DNS hostname_ and _legacy NETBIOS name_ of your computer.  
    This is very relevant outside of the most basic home network setups.  
    You can always change this later.  
 
 2. Click the ***"Next"*** button.
-3. Setup will restart.  After restarting, Setup will continue.  
+3. The Windows OOBE Setup will restart.  After restarting, Setup will continue.  
   
 ---
 
@@ -132,15 +148,12 @@ It is recommended to disable all of the following settings.  You can always sele
   * Change ***"Diagnostic data"*** to ***"Required only"***.
   * Change ***"Inking & typing"*** to ***"No"***.
   * Change ***"Tailored experiences"*** to ***"No"***.
-  * Change ***"Advertising ID"*** to ***"No"***.
 
 2. Click the ***"Accept"*** Button.
 
+   Setup will then download and install Windows Updates.  This will take 5 to 10 minutes.
    Setup will restart.  This will create your user profile and finish configuring Windows.
-   When completed, it will automatically log into your account _(just this once)_ and you'll enter the typical Windows 11 "Explorer" window manager experience.
-
-   Subsequent reboots will require your password as you would normally expect.
-
+   
 --- 
 
 ## 2.6 Continue in "03_POST_INSTALL_CONFIGURATION.md"

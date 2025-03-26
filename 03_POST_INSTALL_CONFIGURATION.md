@@ -314,8 +314,8 @@ Yes, we genuinely have to do it here too.
 
 ## 4.1.1 Post-installation: Set Terminal as default terminal application
 
-The old "Command Line" application is now deprecated and will be removed in future versions of Windows.  Terminal is intended to entirely replace it.
-Terminal is actually a really great, modern terminal application, including excellent integeration with WSL2, and great customization features.
+The old "Command Line" application is deprecated and will be removed in future versions of Windows.  Terminal is intended to replace it.
+Terminal is a great, modern terminal application, including excellent integeration with WSL2, and great customization features.
 
 1. In the search box, type ***"Terminal"***, then click the, ***"Run as administrator"*** on the right-hand side for the ***"Terminal App"***.
 2. At the top of terminal, click ***"Open Settings"***.

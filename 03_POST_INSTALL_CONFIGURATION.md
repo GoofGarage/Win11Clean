@@ -172,6 +172,7 @@ This is required to completely disable Suggestion Toasts for things like Windows
 3. Click ***"Date & time"*** in the right-hand pane.
 4. Next to ***"Time zone"*** _choose the correct time zone for your location_.
 5. Click the ***"Sync now"*** button under ***"Additional Settings"***
+6. Change the ***"Simplified Chinese (Lunar)"*** for ***"Show additional calendars in the taskbar"*** to ***"Don't show additional calendars"***
 
 ## 3.4.2 Post-installation: Disable Typing Insights
 
@@ -357,9 +358,9 @@ The Terminal app should still be open if you only closed the "Settings" tab, and
 3. To remove any of the applications below, type or copy-paste the corresponding command into ***"Terminal"***, then press the ***"Enter"*** key on your keyboard.
 
 
-   ***Bing News:***  
+   ***Bing News, Bing Search and Bing Weather:***  
    
-```Get-AppxPackage -AllUsers *Microsoft.BingNews* | Remove-AppxPackage```
+```Get-AppxPackage -AllUsers *Microsoft.Bing* | Remove-AppxPackage```
 	
    ***Clipchamp - Video Editor:***  
    
@@ -367,7 +368,7 @@ The Terminal app should still be open if you only closed the "Settings" tab, and
 
    Better free video editors exist, such as HitFilm Express.  You won't miss this one.  
 
-   ***Office:***  
+   ***Office Hub:***  
    
 ```Get-AppxPackage -AllUsers *Microsoft.MicrosoftOfficeHub* | Remove-AppxPackage```
 
@@ -399,13 +400,10 @@ The Terminal app should still be open if you only closed the "Settings" tab, and
    
 ```Get-AppxPackage -AllUsers *Microsoft.WindowsMaps* | Remove-AppxPackage```
 
-   ***Zune Music:***  
+   ***Zune Music and Zune Video:***  
    
-```Get-AppxPackage -AllUsers *Microsoft.ZuneMusic* | Remove-AppxPackage```
+```Get-AppxPackage -AllUsers *Microsoft.Zune* | Remove-AppxPackage```
 
-   ***Zune Video:***  
-   
-```Get-AppxPackage -AllUsers *Microsoft.ZuneVideo* | Remove-AppxPackage```
 
 ## 4.1.4 Post-installation: Remove Other Applications, Part 2
 
@@ -417,6 +415,10 @@ All of these applications can be reinstalled from the ***"Microsoft Store"*** ap
 2.	To remove an application, click the ***"..."*** button to the right-hand side of an application, then click ***"Uninstall"***.
 
 The following apps are ones you may wish to remove, depending on your needs...
+
+  * Clock
+
+   _(this is not the Windows clock, it is a separate desktop clock application)_
 
   * Clock
 
@@ -468,7 +470,7 @@ All of these applications can be reinstalled from the ***"Microsoft Store"*** ap
 1. Open the ***"Start"*** menu.
 2. Right-click the Pinned application from the list below, then click the ***"Uninstall"*** menu option.
 
-The following apps are ones you may wish to remove, depending on your needs...
+The following apps are ones you may wish to remove _(if they are installed)_, depending on your needs...
 
   * Camo Studio  
   * ESPN  
@@ -502,7 +504,7 @@ The following apps are ones you may wish to remove, depending on your needs...
 ```dism /online /cleanup-image /analyzecomponentstore```
 
    This will inform you of how much space is still taken up by your local deployment image.  
-   At this point it may be about 8GB, whereas in your initial installation it was closer to 20GB.
+   At this point it may be about 10.3GB, whereas in your initial installation it was closer to 20GB.
 
 ---
 
@@ -578,7 +580,7 @@ Moreover, ensuring your paging file is a fixed size will help to minimize fragme
 
 1. Open the ***"File Explorer***".
 2. Right-click ***"This PC"*** in the left-hand pane, then click "Properties"***
-3. Click the blue link, ***"Advanced system settings], which is the right-most link after, "Related Links"***.
+3. Click the blue link, ***"Advanced system settings"***, which is the right-most link after, ***"Related Links"***.
 4. Click the ***"Settings"*** button in the _"Performance"_ group.
 5. Click the ***"Advanced"*** tab.
 6. Click the ***"Change..."*** button in the _"Virtual memory"_ group.

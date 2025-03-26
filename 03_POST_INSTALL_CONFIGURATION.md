@@ -674,22 +674,12 @@ Moreover, ensuring your paging file is a fixed size will help to minimize fragme
 
 ## 5.5.1 Windows 11 Hardening: Improve Exploit Protection Defaults
 
-1. In the search box, type ***"Windows Security", then click the, ***"Windows Security, System Settings"*** match.
+1. In the search box, type ***"Windows Security"***, then click the, ***"Windows Security, System Settings"*** match.
 2. Click the ***"App & browser control"*** entry in the left-hand pane.
 3. Click the blue link, ***"Exploit protection settings"*** in the right-hand pane under "Exploit Protection".
-4. Under ***"System Settings"*** _(default tab)_, ensure ***"Use default (On)"*** is set for all entries.
+4. Under ***"System Settings"*** _(default tab)_, ensure ***"Use default"*** is set for all entries.
 
-## 5.5.2 Windows 11 Hardening: Install Microsoft Defender Application Guard for Microsoft Edge
-
-This significantly hardens Microsoft Edge, turning off many of its features in the sake of security.  
-These features can always be turned back on -- if you want them back on -- for Microsoft Edge.  
-Consider this section completely optional.  Yet if you'd like Edge to exist purely as a hyper-secure browser, consider it.  
-
-1. Click ***"App & browser control"*** from the left-hand pane of the "Windows Security" window.
-2. Click the ***"Install Microsoft Defender Application Guard"*** blue link in the right-hand pane under, ***"Isolated browsing."***
-3. In the "Windows Features" dialog, check ***"Microsoft Defender Application Guard"***, click the ***"Yes"*** button when prompted to confirm the change, then click the ***"OK***" button.
-
-## 5.5.3 Restart Computer
+## 5.5.2 Restart Computer
 
 1. You must restart Windows for the above changes to take effect.
    

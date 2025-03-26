@@ -51,7 +51,9 @@ As of this release, using ISO ___"Win11_24H2_<Language>_x64.iso"___ is the recom
    This will take 2 to 4 minutes on a modern solid state drive.
 5. Windows Setup will restart the computer in 10 seconds, or you can click the ***"Restart now"*** button.
    
-   After restarting, Setup will continue.  
+   After restarting, Setup will continue.
+   It is possible that Windows may again boot immediately from the USB/Flash drive, restarting the setup process, depending on the boot order you have configured in your computer's BIOS.  If this is the case, exit setup, and remove the USB/Flash drive before the computer restarts.
+   
    It will then restart again during the process before allowing you to start configuring Windows for the first time.
 
 ---

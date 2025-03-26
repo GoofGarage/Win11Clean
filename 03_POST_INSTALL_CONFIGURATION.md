@@ -1,8 +1,8 @@
-# Windows 11 23H2v2 Post-Install Configuration
+# Windows 11 24H2 Post-Install Configuration
 
 ---
 
-The default experience has a memory commit charge of ~1.8GB, and has ~124 running processes -- much leaner than 22H2v2!  
+The default experience has a memory commit charge of ~2.3GB, and has ~126 running processes -- far heftier than 23H2v2!  
 When we are done, we will have reduced this to a memory commit charge of ~1.7GB and ~110 running processes.  
 We will do some cleanup to further trim things down most for the sake of improving privacy and reducing annoyances.    
 Though there will also be a small measurable performance and power efficiency improvement.  
@@ -33,8 +33,7 @@ It will also reduce the initial commit charge of logging into the Explorer windo
 2. Click the ***"Check for updates"*** button.
 
    It is likely that at least 5 updates will be found.  
-   They will all start to install automatically.  This is intended.  
-   The, ***"2024-06 Cumulative Update for Windows 11 Version 23H2 for x64-based Systems"*** will take the longest.  Possibly up to 15 minutes.  
+   For each update, click ***"Download & install"***.  These can all be started and run simultaneously.
 
 3.  When all updates are Completed or Pending Restart, click the ***"Restart now"*** button.  
 
@@ -51,19 +50,8 @@ It will also reduce the initial commit charge of logging into the Explorer windo
    It is likely that at least 1 update will be found.  
    They will all start to install automatically.  This is intended.  
 
----
 
-## 1.3 Post-installation: Windows Update, Part 3
-
-Instead of installing any more updates (they should be done), we'll now customize how Windows 11 handles updates.  
-We'll ensure that Windows only installs updates when you're ready, and won't forcibly restart your computer.
-
-1. Click the ***"Advanced options"*** button, which is the 4th section from the top.
-2. Set ***"Receive updates for other Microsoft products"*** _(first option from top)_ to ***"On"***.
-3. Set ***"Notify me when a restart is required to finish updating"*** _(fourth option from top)_ to ***"On"***.
-4. Close the "Settings" window.
-
-## 1.3.1 Turn off Automatic Restarts
+## 1.2.1 Turn off Automatic Restarts
 
 1. Press the ***"Windows Key + R"*** keyboard shortcut.
 2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
@@ -74,7 +62,7 @@ We'll ensure that Windows only installs updates when you're ready, and won't for
 5. In the right hand pane, double-click ***"Turn off auto-restart for updates during active hours"***.  Optionally also change the active hours.
 6. On the ***"Turn off auto-restart for..."*** dialog, select ***"Enabled"***, then click the ***"OK"*** button.
 
-## 1.3.2 Turn off Automatic Updating
+## 1.2.2 Turn off Automatic Updating
 
 Here we're going to disable the ability for Windows to automatically attempt to download and install updates.  
 This is mostly recommended to guarantee system stability, but it will require you to update your computer yourself to stay secure.  
@@ -98,16 +86,16 @@ For those used to having their Windows Start button and taskbar buttons aligned 
 
 1. Right-click anywhere on the Windows Taskbar.
 2. Click ***"Taskbar Settings"***
-3. Click and expand ***"Taskbar behaviors"*** _(at the bottom of the right-hand side)_.
+3. Click and expand ***"Taskbar behaviors"*** _(fourth section of the right-hand side)_.
 4. Change the ***"Taskbar alignment"*** to ***"Left"***.
 
 ## 2.1.2 Post-installation: Show Seconds in System Tray Clock
 
-1. Click to enable the checkbox next to, ***"Show seconds in system tray clock (uses more power)."***
-
-You may also want to disable Taskbar items such as ***"Task View"***, ***"Widgets"*** and ***"Chat"***, which can be found at the top of the window.  
-
-2. Close the Settings window.
+1. Click ***"Time & language"*** in the left-hand pane _(eighth item from the top)_
+2. Click ***"Date & time"*** at the top of the right-hand pane.
+3. Click the down-arrow ( V ) next to "On" for ***"Show time and date in the System tray"***
+4. Click to enable the checkbox next to, ***"Show seconds in system tray clock (uses more power)."***
+5. Close the Settings window.
 
 ---
 
@@ -115,8 +103,8 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 
 1. In the search box, type ***"Start Settings"***, then click the, ***"Start Settings, System settings"*** match
 2. Under ***"Layout"*** change from ***"Default"*** to ***"More pins"***.
-3. Set, ***"Show recommendations for tips, shortcuts..."***. to ***"Off"***.  This will ensure that ads will not appear in the Start Menu, as ads in the Start Menu are considered recommendations.
-4. You may also wish to set ***"Show recently added apps"***, and ***"Show recently opened items..."*** to ***"Off"***.
+3. Set, ***"Show recommendations for tips, app promotions, and more"***. to ***"Off"***.  This will ensure that ads will not appear in the Start Menu, as ads in the Start Menu are considered recommendations.
+4. You may also wish to set ***"Show recently added apps"***, and ***"Show recommended files in Start..."*** to ***"Off"***.
 
 ---
 
@@ -126,8 +114,8 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 2. Click on ***"Privacy & security"*** in the left-hand panel.
 3. Click on ***"General"*** in the right-hand panel _(3rd from top)_.
 4. Set ***"Let websites show me locally relevant content by accessing my language list"*** to ***"Off"***.
-5. Set ***"Show me suggested contect in the Settings app"*** to ***"Off"***.
-6. Close the "Settings" window.
+5. Set ***"Show me suggested content in the Settings app"*** to ***"Off"***.
+7. Close the "Settings" window.
 
 ## 3.2.2 Post-installation: Disable ads in the File Explorer
 
@@ -154,6 +142,7 @@ You may also want to disable Taskbar items such as ***"Task View"***, ***"Widget
 3. Click on ***"Notifications"*** _(3rd from top)_ in the right-hand pane.
 4. Click on the ***"Additional settings"*** button _(at the bottom)_ to expand it.
 5. Uncheck, ***"Show the Windows welcome experience..."***.
+6. Uncheck, ***"Suggest ways to get the most out of Windows..."***
 7. Uncheck, ***"Get tips and suggestions when I use Windows"***.
 
 ## 3.2.4 Post-installation: Disable Suggestion Notifications in the Registry
@@ -163,22 +152,23 @@ This is required to completely disable Suggestion Toasts for things like Windows
 1. Press the ***"Windows Key + R"*** keyboard shortcut.
 2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the ***"OK"*** button.
 3. Go to the following path: ***[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested]*** .
-4. Double-click ***"Enabled"*** in the right pane
-5. Ensure the value is set to ***"0"***.
-6. Close the Registry Editor window.
+4. Click anywhere in the right pane, select ***"New"***, select ***"DWORD (32-bit)"*** and name it ***"Enabled"***.
+5. Double-click ***"Enabled"*** in the right pane
+6. Ensure the value is set to ***"0"***.
+7. Close the Registry Editor window.
 
 ---
 
 ## 3.3 Post-installation: Disable feedback requests 
 1. Open the ***"Settings"*** app.
 2. Click on ***"Privacy & security"*** in the left-hand pane.
-3. Under ***"Diagnostics & Feedback"*** _(6th from the top)_, change the ***""Feedback frequency"*** to ***"Never"***.
+3. Under ***"Diagnostics & Feedback"*** _(6th from the top)_, change the ***""Feedback frequency"*** _(towards the bottom)_ to ***"Never"***.
 
 ---
 
 ## 3.4.1 Post-installation: Set time zone
 1. Open the ***"Settings"*** app.
-2. Click on ***"Time & language"*** in the left-hand pane.
+2. Click on ***"Time & language"*** _(eighth item from the top)_ in the left-hand pane.
 3. Click ***"Date & time"*** in the right-hand pane.
 4. Next to ***"Time zone"*** _choose the correct time zone for your location_.
 5. Click the ***"Sync now"*** button under ***"Additional Settings"***
@@ -195,16 +185,18 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 
 ---
 
-## 3.5.1 Post-installation: Disable Additional Diagnostic Data
+## 3.5.1 Post-installation: Delete Diagnostic Data
 
 1. Open the ***"Settings"*** app.
 2. Click on ***"Privacy and Security"*** in the left-hand panel.
-3. Click on ***"Activity History"*** _(7th from top)_ in the right hand pane.
-4. Toggle, ***"Store my activity history on this device"*** from On to ***"Off].
-5. Click the ***"Clear history""*** button under Clear Activity History, then click the ***"Clear"*** button.
+3. Click on ***"Diagnostics & feedback"*** _(6th from top)_ in the right-hand pane.
+4. Click on ***"Delete Diagnostic Data"*** _(5th from top)_ in the right-hand pane.
+5. Click the ***"Delete"*** button.
 6. Click the ***"<-"*** back arrow in the top-right hand corner of the "Settings" window.
-7. Click on ***"General"*** _(3rd from top)_ in the right hand panel.
-8. Close the "Settings" window.
+7. Click on ***"Activity history"*** _(7th from top)_ in the right-hand pane.
+8. Turn ***"Store my activity history on this device"*** from "On" to [Off].
+9. Click the ***"Clear history"*** button under Clear Activity History, then click the ***"Clear"*** button.
+10. Close the "Settings" window.
 
 ## 3.5.2 Post-installation: Disable Data Collection
 
@@ -223,25 +215,13 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 5. Double click ***"TurnOffWindowsCopilot"***, set the value to ***"1"***, then click the ***"OK"*** button.
 6. Close the "Registry Editor" window.
 
-## 3.5.4 Post-installation: Disable Windows Copilot in Group Policy
+## 3.5.4 Post-installation: Remove Windows Copilot
 
-1. Press the ***"Windows Key + R"*** keyboard shortcut.
-2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
-3. In the Local Group Policy Editor window, move to the following path in the left sidebar:
-
-   [User Configuration] > [Administrative Templates] > [Windows Components] > [Windows Copilot]
-
-4. In the right hand pane, double-click ***"Turn off Windows Copilot"***.
-5. On the "Turn off Windows Copilot" dialog, select ***"Enabled"***, then click the ***"OK"*** button.
-6. Close the "Local Group Policy Editor" window.
-
-## 3.5.5 Post-installation: Disable Windows Copilot Preview in Taskbar
-
-1. Open the ***"Settings"*** app.
-2. Click on ***"Personalization"*** in the left-hand panel.
+1. In the search box, type ***"Installed apps"***, then click the, ***"Installed apps"*** match
+2. Click the "..." next to "Copilot" then click ***"Uninstall"***
 3. Toggle ***""Copilot (preview)"*** from On to ***"Off"***.
 
-## 3.5.6 Post-installation: Disable the Telemetry Services
+## 3.5.5 Post-installation: Disable the Telemetry Services
 
 1. Press the ***"Windows Key + R"*** keyboard shortcut.
 2. In the ***"Run"*** dialog enter, ***"services.msc"*** then click the ***"OK"*** button.
@@ -254,7 +234,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 9. Click the ***"OK"*** button to close the dialog.
 10. Close the "Services" window.
 
-## 3.5.7 Post-installation: Disable the Customer Experience Improvement Program
+## 3.5.6 Post-installation: Disable the Customer Experience Improvement Program
 
 1. In the search box, search for ***"Task Scheduler"***, then click the ***"Task Scheduler app"*** match.
 2. In the left-hand pane, navigate to [Task Scheduler Library] > [Microsoft] > [Windows] > then click on ***"Customer Experience Improvement Program"***.
@@ -263,40 +243,7 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
 
 --- 
 
-## 3.6.1 Post-installation: Uninstall Cortana
-
-1. Open the ***"Settings"*** app.
-2. Click on ***"Apps"*** _(6th from top)_ in the left-hand pane.
-3. Click on ***"Installed apps"*** _(top-most item)_ in the right-hand pane.
-4. Find ***"Cortana""*** then click the ***"..."*** on the right, then click, ***"Uninstall"***.
-5. Click the ***"Uninstall"*** button.
-
-## 3.6.2 Post-installation: Disable Cortana in the Registry
-
-1. Press the ***"Windows Key + R"*** keyboard shortcut.
-2. In the ***"Run"*** dialog enter, ***"regedit"*** then click the ***"OK"*** button.
-3. Go to the following path: ***[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows]***
-4. Right-click anywhere in the right-hand pane, click ***"New"*** > ***"Key"*** and name it ***"Windows Search"***
-5. Right-click anywhere in the right-hand pane, click ***"New"*** > ***"DWORD (32-bit) Value"*** and name it ***"AllowCortana"***
-6. Ensure the value of ***"AllowCortana"*** is set to ***"0"***.
-7. Close the "Registry Editor" window
-
-## 3.6.3 Post-installation: Disable Cortana in Group Policy
-
-1. Press the ***"Windows Key + R"*** keyboard shortcut.
-2. In the ***"Run"*** dialog enter, ***"gpedit.msc"*** then click the ***"OK"*** button.
-3. In the Local Group Policy Editor window, move to the following path in the left sidebar:
-
-   [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Search]
-   
-4. In the right hand pane, double-click ***"Allow Cortana"***.
-5. On the ***"Allow Cortana"*** dialog, select ***"Disabled"***, then click the ***"OK"*** button.
-6. In the right hand pane, double-click ***"Allow Cortana above lock screen"***.
-7. On the ***"Allow Cortana above lock screen"*** dialog, select ***"Disabled"***, then click the ***"OK"*** button.
-8. In the right hand pane, double-click ***"Allow Cortana Page in OOBE on an AAD account"***.
-9. On the ***"Allow Cortana Page in OOBE on an AAD account***" dialog, select ***"Disabled"***, then click the ***"OK"*** button.
-
-## 3.6.4 Post-installation: Disable Web Search from Search Bar in Group Policy
+## 3.6.1 Post-installation: Disable Web Search from Search Bar in Group Policy
 
 1. Press the ***"Windows Key + R***" keyboard shortcut.
 2. In the ***"Run***" dialog enter, ***"gpedit.msc***" then click the ***"OK***" button.
@@ -304,20 +251,24 @@ Typing Insights are stored on device and not set to Microsoft, but it represents
    
    [Computer Configuration] > [Administrative Templates] > [Windows Components] > [Search]
    
-4. In the right hand pane, double-click ***"Allow search and Cortana to use location***".
-5. On the ***"Allow search and Cortana to use location***" dialog, select ***"Disabled***", then click the ***"OK***" button.
-6. In the right hand pane, double-click ***"Do not allow web search***".
-7. On the ***"Do not allow web search"*** dialog, select ***"Enabled***", then click the ***"OK***" button.
-8. In the right hand pane, double-click ***"Don't search the web or display web results in Search***".
-9. On the ***"Don't search the web or display web results in Search"*** dialog, select ***"Enabled***", then click the ***"OK***" button.
-10. In the right hand pane, double-click ***"Don't search the web or display web results in Search over metered connections***".
-11. On the ***"Don't search the web or display web results in Search over metered connections"***, select ***"Enabled***", then click the ***"OK***" button.
-12. In the right hand pane, double-click ***"Set what information is shared in Search***".
-13. On the ***"Set what information is shared in Search"*** dialog, select ***"Enabled***", then select ***"Anonymous info***" for ***"Type of information***", then click the ***"OK***" button.
+4. In the right hand pane, double-click ***"Allow Cortana"***.
+5. On the ***"Allow Cortana"*** dialog, select ***"Disabled***", then click the ***"OK***" button.
+6. In the right hand pane, double-click ***"Allow Cortana above lock screen"***.
+7. On the ***"Allow Cortana above lock screen"*** dialog, select ***"Disabled"***, then click the ***"OK***" button.
+8. In the right hand pane, double-click ***"Allow Cortana Page in OOBE on an AAD account"***.
+9. On the ***"Allow Cortana Page in OOBE on an AAD account"*** dialog, select ***"Disabled***", then click the ***"OK***" button.
+10. In the right hand pane, double-click ***"Do not allow web search***".
+9. On the ***"Do not allow web search"*** dialog, select ***"Enabled***", then click the ***"OK***" button.
+10. In the right hand pane, double-click ***"Don't search the web or display web results in Search***".
+11. On the ***"Don't search the web or display web results in Search"*** dialog, select ***"Enabled***", then click the ***"OK***" button.
+12. In the right hand pane, double-click ***"Don't search the web or display web results in Search over metered connections***".
+13. On the ***"Don't search the web or display web results in Search over metered connections"***, select ***"Enabled***", then click the ***"OK***" button.
+14. In the right hand pane, double-click ***"Set what information is shared in Search***".
+15. On the ***"Set what information is shared in Search"*** dialog, select ***"Enabled***", then select ***"Anonymous info***" for ***"Type of information***", then click the ***"OK***" button.
 
-14. Close the "Local Group Policy Editor" window.
+16. Close the "Local Group Policy Editor" window.
 
-## 3.6.5 Post-installation: Disable Web Search from Search Bar in Registry
+## 3.6.2 Post-installation: Disable Web Search from Search Bar in Registry
 
 Yes, we genuinely have to do it here too.
 
@@ -338,8 +289,9 @@ Yes, we genuinely have to do it here too.
 3. Click on ***"Search permissions"*** _(8th from top)_ in the right hand pane.
 4. Set ***"Microsoft account"*** to ***"Off"***.
 5. Set ***"Work or School account"*** to ***"Off"***.
-6. Click the ***"Clear device search history"*** button.
-7. Ensure ***"Show search highlights"*** is set to ***"Off"***.
+6. Set ***"Search history on this device"*** to ***"Off"***.
+7. Click the ***"Clear device search history"*** button.
+8. Ensure ***"Show search highlights"*** is set to ***"Off"***.
 
 ---
 
@@ -347,7 +299,8 @@ Yes, we genuinely have to do it here too.
 
 1. Open the ***"Settings"*** app.
 2. Click on ***"Personalization"*** in the left-hand panel.
-3. Set ***"Widgets"*** to ***"Off"*** in the right-hand panel.
+3. Click ***"Taskbar"*** in the right-hand panel.
+4. Set ***"Widgets"*** to ***"Off"*** in the right-hand panel.
 
 ---
 
